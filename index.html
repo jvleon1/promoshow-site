@@ -3,628 +3,273 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PromoShow — Oferta do Momento</title>
-<meta property="og:title" content="PromoShow — Oferta do Momento">
-<meta property="og:description" content="Oferta exclusiva selecionada agora para você!">
-<meta name="theme-color" content="#0a0a0a">
+<title>PromoShow — Ofertas Shopee</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --primary: #FF6B00;
-    --secondary: #FF4500;
-    --glow: rgba(255,107,0,0.5);
-    --bg: #0a0a0a;
-    --surface: #141414;
-    --border: rgba(255,255,255,0.07);
-    --text: #ffffff;
-    --muted: rgba(255,255,255,0.45);
-  }
+:root {
+  --bg: #080808;
+  --surface: #111111;
+  --surface2: #181818;
+  --border: rgba(255,255,255,0.06);
+  --text: #f0f0f0;
+  --muted: rgba(255,255,255,0.38);
+  --accent: #FF6B00;
+  --accent2: #FF3D00;
+  --glow: rgba(255,107,0,0.4);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; min-height:100vh; overflow-x:hidden; }
+body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:100; opacity:0.025; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+/* TOP BAR */
+.topbar { position:sticky; top:0; z-index:50; background:rgba(8,8,8,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); padding:0 24px; height:60px; display:flex; align-items:center; justify-content:space-between; }
+.logo { display:flex; align-items:center; gap:10px; }
+.logo-icon { width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg,var(--accent),var(--accent2)); display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:15px; color:white; box-shadow:0 0 16px var(--glow); flex-shrink:0; }
+.logo-name { font-family:'Bebas Neue',sans-serif; font-size:20px; letter-spacing:2px; }
+.logo-sub { font-size:10px; color:var(--muted); letter-spacing:1.5px; text-transform:uppercase; }
+.topbar-right { display:flex; align-items:center; gap:12px; }
+.live-pill { display:flex; align-items:center; gap:6px; background:rgba(255,107,0,0.1); border:1px solid rgba(255,107,0,0.25); padding:5px 12px; border-radius:50px; font-size:11px; font-weight:700; color:var(--accent); letter-spacing:1px; text-transform:uppercase; }
+.live-dot { width:6px; height:6px; border-radius:50%; background:var(--accent); animation:blink 1.4s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+.update-time { font-size:11px; color:var(--muted); }
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+/* LAYOUT */
+.layout { display:grid; grid-template-columns:300px 1fr; min-height:calc(100vh - 60px); }
 
-  /* NOISE TEXTURE */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.4;
-  }
+/* SIDEBAR */
+.sidebar { border-right:1px solid var(--border); display:flex; flex-direction:column; background:var(--surface); }
+.sidebar-header { padding:18px 16px 14px; border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; position:sticky; top:60px; background:var(--surface); z-index:10; }
+.sidebar-title { font-family:'Bebas Neue',sans-serif; font-size:14px; letter-spacing:2px; color:var(--muted); }
+.count-badge { background:var(--surface2); border:1px solid var(--border); padding:3px 10px; border-radius:50px; font-size:12px; font-weight:700; color:var(--accent); }
+.sidebar-list { overflow-y:auto; flex:1; padding:10px; display:flex; flex-direction:column; gap:6px; }
+.sidebar-list::-webkit-scrollbar { width:3px; }
+.sidebar-list::-webkit-scrollbar-thumb { background:var(--border); border-radius:2px; }
 
-  /* GLOW BG */
-  .bg-glow {
-    position: fixed;
-    top: -30%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 800px;
-    height: 600px;
-    background: radial-gradient(ellipse, rgba(255,107,0,0.12) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 0;
-    transition: background 0.8s ease;
-  }
+/* CARD LISTA */
+.produto-card { background:var(--surface2); border:1px solid var(--border); border-radius:12px; padding:10px; display:flex; gap:10px; align-items:center; text-decoration:none; color:inherit; transition:border-color 0.2s,background 0.2s; animation:slideIn 0.3s ease forwards; opacity:0; cursor:pointer; }
+.produto-card:hover { border-color:rgba(255,107,0,0.3); background:rgba(255,107,0,0.04); }
+@keyframes slideIn { from{opacity:0;transform:translateX(-8px)} to{opacity:1;transform:translateX(0)} }
+.card-img { width:52px; height:52px; border-radius:9px; object-fit:contain; background:#1a1a1a; flex-shrink:0; }
+.card-info { flex:1; min-width:0; }
+.card-name { font-size:11px; font-weight:600; line-height:1.3; margin-bottom:5px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.card-meta { display:flex; align-items:center; gap:5px; flex-wrap:wrap; }
+.card-discount { font-size:10px; font-weight:700; padding:2px 6px; border-radius:50px; }
+.card-nicho { font-size:10px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.card-time { font-size:10px; color:var(--muted); flex-shrink:0; align-self:flex-start; }
 
-  .wrapper {
-    position: relative;
-    z-index: 1;
-    max-width: 480px;
-    margin: 0 auto;
-    padding: 24px 20px 48px;
-  }
+/* MAIN */
+.main { padding:28px 32px; display:flex; flex-direction:column; gap:20px; }
+.main-header { display:flex; align-items:center; gap:12px; }
+.main-title { font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:3px; color:var(--muted); }
+.champion-badge { display:flex; align-items:center; gap:6px; background:linear-gradient(135deg,var(--accent),var(--accent2)); padding:5px 14px; border-radius:50px; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; box-shadow:0 4px 16px var(--glow); }
 
-  /* HEADER */
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 32px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--border);
-  }
+/* CAMPEÃO */
+.champion-wrap { display:grid; grid-template-columns:1fr 1fr; background:var(--surface); border:1px solid var(--border); border-radius:22px; overflow:hidden; position:relative; }
+.champion-wrap::before { content:''; position:absolute; top:-80px; left:-80px; width:350px; height:350px; background:radial-gradient(circle,var(--glow) 0%,transparent 70%); pointer-events:none; opacity:0.35; }
+.champion-img-side { position:relative; background:linear-gradient(135deg,#111,#0d0d0d); display:flex; align-items:center; justify-content:center; padding:36px; min-height:360px; }
+.champion-img { width:100%; max-width:260px; aspect-ratio:1; object-fit:contain; border-radius:14px; filter:drop-shadow(0 16px 36px rgba(0,0,0,0.7)); transition:transform 0.4s ease; }
+.champion-img:hover { transform:scale(1.04); }
+.discount-circle { position:absolute; top:18px; right:18px; width:68px; height:68px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--accent2)); display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:0 6px 20px var(--glow); transform:rotate(12deg); }
+.discount-num { font-family:'Bebas Neue',sans-serif; font-size:22px; line-height:1; }
+.discount-off { font-size:9px; font-weight:900; letter-spacing:1px; }
+.champion-info-side { padding:32px 28px 32px 8px; display:flex; flex-direction:column; justify-content:center; gap:14px; }
+.champ-nicho { font-size:11px; font-weight:700; color:var(--accent); letter-spacing:3px; text-transform:uppercase; }
+.champ-name { font-family:'Bebas Neue',sans-serif; font-size:32px; line-height:1.05; letter-spacing:1px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+.champ-stars { display:flex; align-items:center; gap:8px; }
+.stars-row { display:flex; gap:2px; }
+.star { width:15px; height:15px; }
+.rating-val { font-size:13px; font-weight:700; color:#FFB800; }
+.sales-val { font-size:12px; color:var(--muted); }
+.divider { width:100%; height:1px; background:linear-gradient(90deg,transparent,var(--accent),transparent); opacity:0.25; }
+.price-label { font-size:11px; color:var(--muted); margin-bottom:4px; }
+.champ-price-row { display:flex; align-items:flex-end; gap:8px; }
+.price-current { font-family:'Bebas Neue',sans-serif; font-size:40px; color:var(--accent); line-height:1; }
+.price-orig { font-size:13px; color:var(--muted); text-decoration:line-through; padding-bottom:5px; }
+.economy-tag { font-size:11px; font-weight:700; color:#4ade80; background:rgba(74,222,128,0.1); padding:3px 9px; border-radius:50px; margin-left:auto; align-self:center; }
+.cta-btn { display:flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,var(--accent),var(--accent2)); color:white; text-decoration:none; padding:15px 20px; border-radius:12px; font-weight:700; font-size:14px; letter-spacing:1.5px; text-transform:uppercase; box-shadow:0 8px 24px var(--glow); transition:transform 0.15s,box-shadow 0.15s; }
+.cta-btn:hover { transform:translateY(-2px); box-shadow:0 12px 32px var(--glow); }
+.urgency-row { display:flex; align-items:center; gap:6px; font-size:12px; color:var(--muted); }
+.urgency-row span { color:var(--accent); font-weight:700; }
 
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
+/* EMPTY/LOADING */
+.empty-state { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:60px 20px; gap:10px; color:var(--muted); text-align:center; }
+.empty-state h3 { font-family:'Bebas Neue',sans-serif; font-size:20px; letter-spacing:2px; color:rgba(255,255,255,0.15); }
+.spinner { width:28px; height:28px; border:2px solid var(--border); border-top-color:var(--accent); border-radius:50%; animation:spin 0.8s linear infinite; }
+@keyframes spin { to{transform:rotate(360deg)} }
 
-  .logo-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 18px;
-    color: white;
-    box-shadow: 0 0 20px var(--glow);
-    flex-shrink: 0;
-  }
-
-  .logo-name {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 22px;
-    letter-spacing: 2px;
-    line-height: 1;
-  }
-
-  .logo-sub {
-    font-size: 11px;
-    color: var(--muted);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-top: 2px;
-  }
-
-  .live-badge {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(255,107,0,0.12);
-    border: 1px solid rgba(255,107,0,0.3);
-    padding: 6px 12px;
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--primary);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  .live-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--primary);
-    animation: pulse 1.5s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(0.8); }
-  }
-
-  /* NICHO LABEL */
-  .nicho-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--primary);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: fadeUp 0.5s 0.1s forwards;
-  }
-
-  /* PRODUTO CARD */
-  .product-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 24px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: fadeUp 0.5s 0.2s forwards;
-    position: relative;
-  }
-
-  /* DISCOUNT TAG */
-  .discount-tag {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: white;
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    box-shadow: 0 6px 24px var(--glow);
-    transform: rotate(12deg);
-  }
-
-  .discount-number {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 26px;
-    line-height: 1;
-  }
-
-  .discount-off {
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 1px;
-  }
-
-  .product-image-wrap {
-    width: 100%;
-    aspect-ratio: 1;
-    background: linear-gradient(180deg, #1a1a1a, #111);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 32px;
-    position: relative;
-  }
-
-  .product-image-wrap::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: linear-gradient(transparent, var(--surface));
-  }
-
-  .product-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 16px;
-    filter: drop-shadow(0 16px 40px rgba(0,0,0,0.6));
-    transition: transform 0.4s ease;
-  }
-
-  .product-image:hover {
-    transform: scale(1.03);
-  }
-
-  .product-info {
-    padding: 20px 24px 24px;
-  }
-
-  /* RATING */
-  .rating-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 14px;
-  }
-
-  .stars {
-    display: flex;
-    gap: 3px;
-  }
-
-  .star {
-    width: 16px;
-    height: 16px;
-  }
-
-  .rating-text {
-    font-size: 13px;
-    font-weight: 700;
-    color: #FFB800;
-  }
-
-  .sales-text {
-    font-size: 12px;
-    color: var(--muted);
-    margin-left: 4px;
-  }
-
-  .product-name {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 28px;
-    line-height: 1.1;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  /* PRICE */
-  .price-row {
-    display: flex;
-    align-items: flex-end;
-    gap: 12px;
-    margin-bottom: 20px;
-    padding: 16px;
-    background: rgba(255,107,0,0.06);
-    border: 1px solid rgba(255,107,0,0.15);
-    border-radius: 14px;
-  }
-
-  .price-current {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 40px;
-    color: var(--primary);
-    line-height: 1;
-  }
-
-  .price-original {
-    font-size: 14px;
-    color: var(--muted);
-    text-decoration: line-through;
-    padding-bottom: 4px;
-  }
-
-  .price-economy {
-    font-size: 12px;
-    font-weight: 700;
-    color: #4CAF50;
-    background: rgba(76,175,80,0.1);
-    padding: 4px 10px;
-    border-radius: 50px;
-    margin-left: auto;
-    align-self: center;
-  }
-
-  /* CTA */
-  .cta-button {
-    display: block;
-    width: 100%;
-    padding: 18px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    border-radius: 14px;
-    box-shadow: 0 8px 32px var(--glow);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .cta-button::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
-
-  .cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px var(--glow);
-  }
-
-  .cta-button:hover::before { opacity: 1; }
-  .cta-button:active { transform: translateY(0); }
-
-  /* URGENCIA */
-  .urgency-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 14px;
-    background: rgba(255,107,0,0.06);
-    border: 1px solid rgba(255,107,0,0.15);
-    border-radius: 14px;
-    margin-bottom: 20px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--muted);
-    opacity: 0;
-    animation: fadeUp 0.5s 0.4s forwards;
-  }
-
-  .urgency-bar span {
-    color: var(--primary);
-    font-weight: 700;
-  }
-
-  /* FOOTER */
-  footer {
-    text-align: center;
-    padding-top: 24px;
-    border-top: 1px solid var(--border);
-    opacity: 0;
-    animation: fadeUp 0.5s 0.5s forwards;
-  }
-
-  footer p {
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.8;
-  }
-
-  footer a {
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 700;
-  }
-
-  /* LOADING */
-  .loading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 60vh;
-    gap: 16px;
-  }
-
-  .spinner {
-    width: 40px;
-    height: 40px;
-    border: 3px solid var(--border);
-    border-top-color: var(--primary);
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-  }
-
-  @keyframes spin { to { transform: rotate(360deg); } }
-
-  .loading p {
-    font-size: 14px;
-    color: var(--muted);
-    letter-spacing: 1px;
-  }
-
-  /* EMPTY */
-  .empty {
-    text-align: center;
-    padding: 60px 20px;
-    display: none;
-  }
-  .empty h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 32px;
-    margin-bottom: 12px;
-    color: var(--muted);
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  /* TIMESTAMP */
-  .updated-at {
-    text-align: center;
-    font-size: 11px;
-    color: var(--muted);
-    margin-top: 12px;
-    letter-spacing: 0.5px;
-    opacity: 0;
-    animation: fadeUp 0.5s 0.6s forwards;
-  }
+/* MOBILE */
+@media(max-width:860px) {
+  .layout { grid-template-columns:1fr; }
+  .sidebar { border-right:none; border-bottom:1px solid var(--border); max-height:240px; }
+  .sidebar-list { flex-direction:row; overflow-x:auto; overflow-y:hidden; flex-wrap:nowrap; }
+  .produto-card { min-width:180px; flex-direction:column; align-items:flex-start; }
+  .champion-wrap { grid-template-columns:1fr; }
+  .champion-img-side { min-height:220px; padding:20px; }
+  .champion-info-side { padding:20px; }
+  .main { padding:16px; }
+}
 </style>
 </head>
 <body>
 
-<div class="bg-glow" id="bgGlow"></div>
-
-<div class="wrapper">
-  <header>
-    <div class="logo">
-      <div class="logo-icon">PS</div>
-      <div>
-        <div class="logo-name">PromoShow</div>
-        <div class="logo-sub">Ofertas Shopee</div>
-      </div>
-    </div>
-    <div class="live-badge">
-      <div class="live-dot"></div>
-      Ao vivo
-    </div>
-  </header>
-
-  <!-- LOADING STATE -->
-  <div class="loading" id="loading">
-    <div class="spinner"></div>
-    <p>Carregando oferta...</p>
-  </div>
-
-  <!-- EMPTY STATE -->
-  <div class="empty" id="empty">
-    <h2>Nenhuma oferta agora</h2>
-    <p style="color:var(--muted)">Volte em breve, novas ofertas chegando! 🔥</p>
-  </div>
-
-  <!-- CONTEÚDO DINÂMICO -->
-  <div id="content" style="display:none">
-    <div class="nicho-label" id="nichoLabel"></div>
-
-    <div class="product-card">
-      <div class="discount-tag">
-        <div class="discount-number" id="discountNum">0%</div>
-        <div class="discount-off">OFF</div>
-      </div>
-      <div class="product-image-wrap">
-        <img class="product-image" id="productImg" src="" alt="Produto">
-      </div>
-      <div class="product-info">
-        <div class="rating-row">
-          <div class="stars" id="starsEl"></div>
-          <span class="rating-text" id="ratingText"></span>
-          <span class="sales-text" id="salesText"></span>
-        </div>
-        <div class="product-name" id="productName"></div>
-        <div class="price-row">
-          <div class="price-current" id="priceEl"></div>
-          <div class="price-original" id="priceOrigEl"></div>
-          <div class="price-economy" id="priceEcon"></div>
-        </div>
-        <a class="cta-button" id="ctaBtn" href="#" target="_blank" rel="noopener">
-          🛒 COMPRAR NA SHOPEE
-        </a>
-      </div>
-    </div>
-
-    <div class="urgency-bar" id="urgencyBar">
-      ⚡ Oferta válida por tempo limitado — <span>garanta o seu agora!</span>
+<header class="topbar">
+  <div class="logo">
+    <div class="logo-icon">PS</div>
+    <div>
+      <div class="logo-name">PromoShow</div>
+      <div class="logo-sub">Ofertas Shopee</div>
     </div>
   </div>
+  <div class="topbar-right">
+    <div class="live-pill"><div class="live-dot"></div>Ao vivo</div>
+    <span class="update-time" id="updateTime">Carregando...</span>
+  </div>
+</header>
 
-  <div class="updated-at" id="updatedAt"></div>
+<div class="layout">
 
-  <footer>
-    <p>Curadoria de ofertas por <a href="https://t.me/promoshovv" target="_blank">@promoshovv</a><br>
-    Atualizado automaticamente • Preços sujeitos a alteração</p>
-  </footer>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Postados Hoje</span>
+      <span class="count-badge" id="countBadge">0</span>
+    </div>
+    <div class="sidebar-list" id="sidebarList">
+      <div class="empty-state"><div class="spinner"></div></div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="main-header">
+      <span class="main-title">Destaque do Momento</span>
+      <div class="champion-badge">🏆 Produto Campeão</div>
+    </div>
+    <div id="championWrap">
+      <div class="empty-state"><div class="spinner"></div></div>
+    </div>
+  </main>
+
 </div>
 
 <script>
-// Cores por nicho
 const TEMAS = {
-  'Tech_e_Gadgets': { primary:'#6C63FF', secondary:'#4834D4', glow:'rgba(108,99,255,0.5)', label:'📱 Tech & Gadgets' },
-  'Cozinha':        { primary:'#F4A261', secondary:'#E76F51', glow:'rgba(244,162,97,0.5)',  label:'🍳 Casa & Cozinha' },
-  'Casa':           { primary:'#74B9FF', secondary:'#0984E3', glow:'rgba(116,185,255,0.5)', label:'🏠 Casa & Decoração' },
-  'Beleza_e_Estilo':{ primary:'#E91E8C', secondary:'#C2185B', glow:'rgba(233,30,140,0.5)',  label:'💄 Beleza & Estilo' },
-  'Ferramentas':    { primary:'#FF6B00', secondary:'#FF4500', glow:'rgba(255,107,0,0.5)',   label:'🔧 Ferramentas' },
-  'geral':          { primary:'#FF6B00', secondary:'#FF4500', glow:'rgba(255,107,0,0.5)',   label:'🛍️ Oferta Exclusiva' }
+  'Tech_e_Gadgets':  {primary:'#6C63FF',glow:'rgba(108,99,255,0.4)',label:'📱 Tech & Gadgets'},
+  'Cozinha':         {primary:'#F4A261',glow:'rgba(244,162,97,0.4)', label:'🍳 Casa & Cozinha'},
+  'Casa':            {primary:'#74B9FF',glow:'rgba(116,185,255,0.4)',label:'🏠 Casa & Decoração'},
+  'Beleza_e_Estilo': {primary:'#E91E8C',glow:'rgba(233,30,140,0.4)', label:'💄 Beleza & Estilo'},
+  'Ferramentas':     {primary:'#FF6B00',glow:'rgba(255,107,0,0.4)',  label:'🔧 Ferramentas'},
+  'geral':           {primary:'#FF6B00',glow:'rgba(255,107,0,0.4)',  label:'🛍️ Oferta Exclusiva'}
 };
 
-function aplicaTema(nicho) {
-  const t = TEMAS[nicho] || TEMAS['geral'];
-  document.documentElement.style.setProperty('--primary', t.primary);
-  document.documentElement.style.setProperty('--secondary', t.secondary);
-  document.documentElement.style.setProperty('--glow', t.glow);
-  document.getElementById('bgGlow').style.background =
-    `radial-gradient(ellipse, ${t.glow.replace('0.5','0.12')} 0%, transparent 70%)`;
-  return t;
+function getTema(n){ return TEMAS[n]||TEMAS['geral']; }
+
+function renderStars(r){
+  const f=Math.round(parseFloat(r)||0);
+  return Array.from({length:5},(_,i)=>`<svg class="star" viewBox="0 0 24 24" fill="${i<f?'#FFB800':'rgba(255,255,255,0.12)'}"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`).join('');
 }
 
-function renderStars(rating) {
-  const full = Math.round(rating);
-  return Array.from({length: 5}, (_, i) => `
-    <svg class="star" viewBox="0 0 24 24" fill="${i < full ? '#FFB800' : 'rgba(255,255,255,0.15)'}">
-      <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-    </svg>`).join('');
+function timeAgo(ts){
+  if(!ts) return '';
+  const d=Math.floor(Date.now()/1000)-parseInt(ts);
+  if(d<60) return 'agora';
+  if(d<3600) return `${Math.floor(d/60)}min`;
+  return `${Math.floor(d/3600)}h`;
 }
 
-function formatPrice(price) {
-  return 'R$ ' + parseFloat(price).toFixed(2).replace('.', ',');
+function fmtPrice(p){
+  return p>0?'R$ '+parseFloat(p).toFixed(2).replace('.',','):'';
 }
 
-function timeAgo(ts) {
-  const diff = Math.floor((Date.now()/1000) - ts);
-  if (diff < 60) return 'agora mesmo';
-  if (diff < 3600) return `há ${Math.floor(diff/60)} min`;
-  if (diff < 86400) return `há ${Math.floor(diff/3600)}h`;
-  return `há ${Math.floor(diff/86400)} dias`;
-}
-
-async function carregaProduto() {
-  try {
-    // Busca o JSON com cache-busting
-    const res = await fetch('./produto.json?v=' + Date.now());
-    if (!res.ok) throw new Error('Sem produto');
-    const p = await res.json();
-
-    if (!p || !p.productNameClean) {
-      document.getElementById('loading').style.display = 'none';
-      document.getElementById('empty').style.display = 'block';
+async function carregaCampeao(){
+  try{
+    const res=await fetch('./produto.json?v='+Date.now());
+    if(!res.ok) throw 0;
+    const p=await res.json();
+    if(!p||!p.productNameClean||p.productNameClean.includes('Aguardando')){
+      document.getElementById('championWrap').innerHTML=`<div class="empty-state"><h3>Nenhum campeão ainda</h3><p>Aguarde o próximo horário</p></div>`;
       return;
     }
-
-    const tema = aplicaTema(p.nicho || 'geral');
-    const desconto = parseFloat(p.priceDiscountRate) || 0;
-    const preco = parseFloat(p.price) || 0;
-    const precoOriginal = preco / (1 - desconto/100);
-
-    // Preenche os campos
-    document.getElementById('nichoLabel').textContent = tema.label;
-    document.getElementById('discountNum').textContent = desconto + '%';
-    document.getElementById('productImg').src = p.imageUrl;
-    document.getElementById('productImg').alt = p.productNameClean;
-    document.getElementById('starsEl').innerHTML = renderStars(p.ratingStar);
-    document.getElementById('ratingText').textContent = parseFloat(p.ratingStar).toFixed(1);
-    document.getElementById('salesText').textContent = `• ${p.sales}+ vendidos`;
-    document.getElementById('productName').textContent = p.productNameClean;
-    document.getElementById('priceEl').textContent = preco > 0 ? formatPrice(preco) : 'Ver preço';
-    document.getElementById('priceOrigEl').textContent = preco > 0 ? formatPrice(precoOriginal) : '';
-    document.getElementById('priceEcon').textContent = `Economia ${desconto}%`;
-    document.getElementById('ctaBtn').href = p.offerLink || '#';
-
-    // Urgência por nível de desconto
-    const urgBar = document.getElementById('urgencyBar');
-    if (desconto >= 70) urgBar.innerHTML = '🚨 Desconto ABSURDO! <span>Pode esgotar a qualquer momento!</span>';
-    else if (desconto >= 50) urgBar.innerHTML = '⚡ Oferta imperdível! <span>Corre antes de acabar!</span>';
-    else urgBar.innerHTML = '💰 Oferta selecionada! <span>Garanta o seu agora!</span>';
-
-    // Timestamp
-    if (p.timestamp) {
-      document.getElementById('updatedAt').textContent =
-        'Atualizado ' + timeAgo(p.timestamp);
-    }
-
-    // Mostra conteúdo
-    document.getElementById('loading').style.display = 'none';
-    document.getElementById('content').style.display = 'block';
-
-    // Atualiza meta tags OG
-    document.title = `${desconto}% OFF — ${p.productNameClean} | PromoShow`;
-
-  } catch(e) {
-    document.getElementById('loading').style.display = 'none';
-    document.getElementById('empty').style.display = 'block';
+    const t=getTema(p.nicho);
+    const disc=parseFloat(p.priceDiscountRate)||0;
+    const rat=parseFloat(p.ratingStar)||0;
+    const pr=parseFloat(p.price)||0;
+    const prOrig=pr>0?pr/(1-disc/100):0;
+    document.documentElement.style.setProperty('--accent',t.primary);
+    document.documentElement.style.setProperty('--accent2',t.primary);
+    document.documentElement.style.setProperty('--glow',t.glow);
+    let urg='⚡ Oferta válida por <span>tempo limitado!</span>';
+    if(disc>=70) urg='🚨 Desconto <span>ABSURDO!</span> Corre antes de esgotar!';
+    else if(disc>=50) urg='⚡ Oferta <span>imperdível!</span> Aproveite agora!';
+    document.getElementById('championWrap').innerHTML=`
+      <div class="champion-wrap">
+        <div class="champion-img-side">
+          <img class="champion-img" src="${p.imageUrl}" alt="${p.productNameClean}" onerror="this.style.opacity=0.2">
+          <div class="discount-circle"><div class="discount-num">${disc}%</div><div class="discount-off">OFF</div></div>
+        </div>
+        <div class="champion-info-side">
+          <div class="champ-nicho">${t.label}</div>
+          <div class="champ-name">${p.productNameClean.toUpperCase()}</div>
+          <div class="champ-stars">
+            <div class="stars-row">${renderStars(rat)}</div>
+            <span class="rating-val">${rat.toFixed(1)}</span>
+            <span class="sales-val">• ${p.sales||0}+ vendidos</span>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <div class="price-label">Preço com desconto</div>
+            <div class="champ-price-row">
+              <div class="price-current">${pr>0?fmtPrice(pr):'Ver preço'}</div>
+              ${prOrig>0?`<div class="price-orig">${fmtPrice(prOrig)}</div>`:''}
+              ${disc>0?`<div class="economy-tag">-${disc}%</div>`:''}
+            </div>
+          </div>
+          <a class="cta-btn" href="${p.offerLink||'#'}" target="_blank" rel="noopener">🛒 Comprar na Shopee</a>
+          <div class="urgency-row">${urg}</div>
+        </div>
+      </div>`;
+    if(p.timestamp) document.getElementById('updateTime').textContent='Atualizado '+timeAgo(p.timestamp);
+  }catch(e){
+    document.getElementById('championWrap').innerHTML=`<div class="empty-state"><h3>Sem produto em destaque</h3></div>`;
   }
 }
 
-carregaProduto();
+async function carregaLista(){
+  try{
+    const res=await fetch('./produtos_hoje.json?v='+Date.now());
+    if(!res.ok) throw 0;
+    const lista=await res.json();
+    const el=document.getElementById('sidebarList');
+    document.getElementById('countBadge').textContent=lista.length;
+    if(!lista||lista.length===0){
+      el.innerHTML=`<div class="empty-state"><h3>Nenhum produto hoje</h3></div>`;
+      return;
+    }
+    lista.sort((a,b)=>(b.timestamp||0)-(a.timestamp||0));
+    el.innerHTML=lista.map((p,i)=>{
+      const t=getTema(p.nicho);
+      return `<a class="produto-card" href="${p.offerLink||'#'}" target="_blank" rel="noopener" style="animation-delay:${i*35}ms">
+        <img class="card-img" src="${p.imageUrl}" alt="${p.productNameClean}" onerror="this.style.opacity=0.2">
+        <div class="card-info">
+          <div class="card-name">${p.productNameClean}</div>
+          <div class="card-meta">
+            <span class="card-discount" style="color:${t.primary};background:${t.glow.replace('0.4','0.1')}">${p.priceDiscountRate}% OFF</span>
+            <span class="card-nicho">${t.label}</span>
+          </div>
+        </div>
+        <div class="card-time">${timeAgo(p.timestamp)}</div>
+      </a>`;
+    }).join('');
+  }catch(e){
+    document.getElementById('sidebarList').innerHTML=`<div class="empty-state"><h3>Sem produtos hoje</h3></div>`;
+    document.getElementById('countBadge').textContent='0';
+  }
+}
+
+async function init(){ await Promise.all([carregaCampeao(),carregaLista()]); }
+init();
+setInterval(init, 2*60*1000);
 </script>
 </body>
 </html>
