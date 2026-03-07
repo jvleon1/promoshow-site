@@ -172,7 +172,13 @@ function renderStars(r){
 
 function timeAgo(ts){
   if(!ts) return '';
-  const d=Math.floor(Date.now()/1000)-parseInt(ts);
+  let unix;
+  if(String(ts).includes('T') || String(ts).includes('-')){
+    unix = Math.floor(new Date(ts).getTime()/1000);
+  } else {
+    unix = parseInt(ts);
+  }
+  const d = Math.floor(Date.now()/1000) - unix;
   if(d<60) return 'agora';
   if(d<3600) return `${Math.floor(d/60)}min`;
   return `${Math.floor(d/3600)}h`;
@@ -187,7 +193,15 @@ async function carregaCampeao(){
     const res=await fetch('./produto.json?v='+Date.now());
     if(!res.ok) throw 0;
     const p=await res.json();
-    if(!p||!p.productNameClean||p.productNameClean.includes('Aguardando')){
+    // Normaliza campos independente do nome
+    p.productNameClean = p.productNameClean || p.nome || p.title || p.name || '';
+    p.priceDiscountRate = p.priceDiscountRate || p.desconto || 0;
+    p.imageUrl = p.imageUrl || p.imagem || p.image || '';
+    p.offerLink = p.offerLink || p.link || p.url || '#';
+    p.ratingStar = p.ratingStar || p.rating || 0;
+    p.sales = p.sales || p.vendas || 0;
+
+    if(!p || !p.productNameClean || p.productNameClean.includes('Aguardando')){
       document.getElementById('championWrap').innerHTML=`<div class="empty-state"><h3>Nenhum campeão ainda</h3><p>Aguarde o próximo horário</p></div>`;
       return;
     }
