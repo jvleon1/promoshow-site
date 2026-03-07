@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Aspirador Sem Fio 3 Em 1 Para Carro Bivolt 9000Pa...",
-    "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-7rd53-luu232tzalhx96",
-    "ratingStar": "4.6",
-    "priceDiscountRate": 61,
-    "price": "30.9",
-    "sales": 1294,
-    "offerLink": "https://s.shopee.com.br/6fcMOA7Bbo",
-    "nicho": "Ferramentas",
-    "timestamp": 1772859636
-  },
-  {
     "productNameClean": "Canhão De Espuma Para Lavadora Alta Pressão Snow Foam Sistem...",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-lxc2iqp4acfq22",
     "ratingStar": "4.9",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/900HyifZko",
     "nicho": "Cozinha",
     "timestamp": 1772903555
+  },
+  {
+    "productNameClean": "Fogão de ovos elétrico portátil de 110-220 volts",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81z1k-mg7kifx0ka2ta4",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 90,
+    "price": "29.99",
+    "sales": 797,
+    "offerLink": "https://s.shopee.com.br/9zspAy5bxZ",
+    "nicho": "Cozinha",
+    "timestamp": 1772903915
   }
 ]
