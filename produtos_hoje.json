@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Serra Tico Tico Profissional Base Ajustável 700w 3900rpm",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-mcd6efsvbgm8a4",
-    "ratingStar": "4.7",
-    "priceDiscountRate": 62,
-    "price": "113.9",
-    "sales": 575,
-    "offerLink": "https://s.shopee.com.br/8fNREGeAVx",
-    "nicho": "Ferramentas",
-    "timestamp": 1772884477
-  },
-  {
     "productNameClean": "Pistola de limpeza de alta pressão portátil profissional sem fio...",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81z1k-mg4hnbnargud32",
     "ratingStar": "4.6",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/3qIC43fafS",
     "nicho": "Casa",
     "timestamp": 1772916516
+  },
+  {
+    "productNameClean": "Saco Aspirador De Pó Electrolux Descartável 3 Unidades AQP10 AQP20...",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98r-llv6i3nhxkc7ca",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 25,
+    "price": "23.87",
+    "sales": 502,
+    "offerLink": "https://s.shopee.com.br/3fylsAET1x",
+    "nicho": "Casa",
+    "timestamp": 1772916875
   }
 ]
