@@ -1,12 +1,11 @@
 {
-  "nome": "Fogão de ovos elétrico portátil de 110-220 volts",
-  "preco": "",
-  "precoOriginal": "",
-  "desconto": 90,
-  "imagem": "https://cf.shopee.com.br/file/br-11134207-81z1k-mg7kifx0ka2ta4",
-  "link": "https://s.shopee.com.br/9zspAy5bxZ",
-  "rating": 4.9,
-  "vendas": 797,
+  "productNameClean": "Fogão de ovos elétrico portátil de 110-220 volts",
+  "priceDiscountRate": 90,
+  "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81z1k-mg7kifx0ka2ta4",
+  "offerLink": "https://s.shopee.com.br/9zspAy5bxZ",
+  "ratingStar": 4.9,
+  "sales": 797,
+  "price": 0,
   "nicho": "Cozinha",
-  "timestamp": "2026-03-07T22:23:10.065Z"
+  "timestamp": "2026-03-07T22:29:28.412Z"
 }
