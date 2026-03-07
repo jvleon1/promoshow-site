@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Balança Digital de Cozinha Inox alta precisão com Visor digital...",
-    "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-8258j-mg8c8mr7te6hbc",
-    "ratingStar": "4.8",
-    "priceDiscountRate": 73,
-    "price": "26.5",
-    "sales": 1480,
-    "offerLink": "https://s.shopee.com.br/5L6zYGuOMk",
-    "nicho": "Cozinha",
-    "timestamp": 1772900315
-  },
-  {
     "productNameClean": "Escorredor De louças Pratos duplo 2 andares 13 pratos...",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m2csw2thvskx28",
     "ratingStar": "4.8",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/40bcPbl9GD",
     "nicho": "Beleza_e_Estilo",
     "timestamp": 1772924592
+  },
+  {
+    "productNameClean": "Secador de Cabelo 110v Profissional 3200w - Voltagem 110v--6881",
+    "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-7rd61-lvxak8xdmqgz81",
+    "ratingStar": "4.7",
+    "priceDiscountRate": 38,
+    "price": "49.99",
+    "sales": 1570,
+    "offerLink": "https://s.shopee.com.br/15TeTUK0c",
+    "nicho": "Beleza_e_Estilo",
+    "timestamp": 1772924781
   }
 ]
