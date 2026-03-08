@@ -64,5 +64,16 @@
     "price": 0,
     "nicho": "Beleza_e_Estilo",
     "timestamp": 1773006129
+  },
+  {
+    "productNameClean": "Camiseta Bordada Abrebition - Várias Estampas - Malha 30.1 Penteado",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m8typ26es3o137",
+    "ratingStar": "4.8",
+    "priceDiscountRate": 40,
+    "price": "41.94",
+    "sales": 1068,
+    "offerLink": "https://s.shopee.com.br/qecBAxEfO",
+    "nicho": "Beleza_e_Estilo",
+    "timestamp": 1773007929
   }
 ]
