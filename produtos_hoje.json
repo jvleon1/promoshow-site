@@ -174,5 +174,16 @@
     "price": 0,
     "nicho": "Casa",
     "timestamp": 1773000009
+  },
+  {
+    "productNameClean": "Kit 3 Toalhas de Piso Luxo antiderrapante Tapete p/ Banheiro",
+    "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-8225i-mhpcyu1q53pgd2",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 45,
+    "price": "35.9",
+    "sales": 487,
+    "offerLink": "https://s.shopee.com.br/9KdAA8x4qC",
+    "nicho": "Casa",
+    "timestamp": 1773000369
   }
 ]
