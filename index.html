@@ -190,7 +190,7 @@ function fmtPrice(p){
 
 async function carregaCampeao(){
   try{
-    const res=await fetch('./produto.json?v='+Date.now());
+    const res=await fetch('https://raw.githubusercontent.com/jvleon1/promoshow-site/main/produto.json?v='+Date.now());
     if(!res.ok) throw 0;
     const p=await res.json();
     // Normaliza campos independente do nome
@@ -251,7 +251,7 @@ async function carregaCampeao(){
 
 async function carregaLista(){
   try{
-    const res=await fetch('./produtos_hoje.json?v='+Date.now());
+    const res=await fetch('https://raw.githubusercontent.com/jvleon1/promoshow-site/main/produtos_hoje.json?v='+Date.now());
     if(!res.ok) throw 0;
     const lista=await res.json();
     const el=document.getElementById('sidebarList');
