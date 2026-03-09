@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Panela de Pressão 7 litros Polida Fortlar",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m3owm461ccvse5",
-    "ratingStar": "4.9",
-    "priceDiscountRate": 25,
-    "price": "79.99",
-    "sales": 324,
-    "offerLink": "https://s.shopee.com.br/9pZS5w0l5S",
-    "nicho": "Cozinha",
-    "timestamp": 1773072781
-  },
-  {
     "productNameClean": "Cozedor de Ovos 110V/220V Elétrico Portátil Cozinha à Vapor Envio...",
     "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-7rdvr-mdeoqewmpp3p05",
     "ratingStar": "4.9",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/3VfP1xqEbx",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773098702
+  },
+  {
+    "productNameClean": "2026 Novo Mais Recente Smartwatch Relógio Inteligente Série IWO 8...",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-ltxyui9rvtec1c",
+    "ratingStar": "4.8",
+    "priceDiscountRate": 67,
+    "price": "39.9",
+    "sales": 3402,
+    "offerLink": "https://s.shopee.com.br/3qIFQzMrdV",
+    "nicho": "Tech_e_Gadgets",
+    "timestamp": 1773099061
   }
 ]
