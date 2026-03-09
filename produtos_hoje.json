@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Descascador Elétrico Automatico Portátil 127/220V Cozinha Descascar Alho Uvas Frutas...",
-    "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-82617-mjohfkarlz4578",
-    "ratingStar": "4.8",
-    "priceDiscountRate": 17,
-    "price": "74.99",
-    "sales": 2125,
-    "offerLink": "https://s.shopee.com.br/gLD7NehpC",
-    "nicho": "Cozinha",
-    "timestamp": 1773069541
-  },
-  {
     "productNameClean": "Chaleira Elétrica 1,8 Litros Térmica Inox Bule Com Tampa Ideal...",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81ztc-mjyb09q9zb4155",
     "ratingStar": "4.8",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/8fNV7kb8SS",
     "nicho": "Beleza_e_Estilo",
     "timestamp": 1773095461
+  },
+  {
+    "productNameClean": "Perfume Árabe Feminino Sabah Al Ward 100ML",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m5zri178kzgl0f",
+    "ratingStar": "4.6",
+    "priceDiscountRate": 69,
+    "price": "21.99",
+    "sales": 1337,
+    "offerLink": "https://s.shopee.com.br/4VXwAVOxtG",
+    "nicho": "Beleza_e_Estilo",
+    "timestamp": 1773095821
   }
 ]
