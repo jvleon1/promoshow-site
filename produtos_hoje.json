@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Parafusadeira Furadeira 48V 2 Baterias Com Maleta e Acessórios Completo",
-    "priceDiscountRate": 49,
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-820m2-mleop93wmozq7b",
-    "offerLink": "https://s.shopee.com.br/4VXvdXaxdG",
-    "ratingStar": 4.9,
-    "sales": 1246,
-    "price": 0,
-    "nicho": "Ferramentas",
-    "timestamp": 1773067021
-  },
-  {
     "productNameClean": "MMA/TIG Solda Inversora Digital Bivolt 200A 110V/220V - Dobevi...",
     "priceDiscountRate": 58,
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-mdcwquxttvr504",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/8KkegfGc6x",
     "nicho": "Beleza_e_Estilo",
     "timestamp": 1773093301
+  },
+  {
+    "productNameClean": "Whey Protein 900g Muito Barato Bom e Saboroso - Massa...",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-maews3pvlj0v2a",
+    "ratingStar": "4.8",
+    "priceDiscountRate": 72,
+    "price": "36.19",
+    "sales": 1949,
+    "offerLink": "https://s.shopee.com.br/10y3xbL2HJ",
+    "nicho": "Beleza_e_Estilo",
+    "timestamp": 1773093661
   }
 ]
