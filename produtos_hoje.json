@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Maquina Mini Donuts Portátil Potente 7 Furos Rosquinha",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m8du7nm0nimp39",
-    "ratingStar": "4.9",
-    "priceDiscountRate": 22,
-    "price": "124.99",
-    "sales": 290,
-    "offerLink": "https://s.shopee.com.br/2qPhoMszi9",
-    "nicho": "Cozinha",
-    "timestamp": 1773075664
-  },
-  {
     "productNameClean": "Kit 2 Balanças Digital Cozinha e Bioimpedância Para Dieta...",
     "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-822xv-mi3eod0m641vb1",
     "ratingStar": "4.9",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/6VJ0ciIVdh",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773099784
+  },
+  {
+    "productNameClean": "Lenovo GM2 PRO Fone de ouvido para jogos de baixa...",
+    "imageUrl": "https://cf.shopee.com.br/file/cn-11134207-7ras8-m5vbeyo02t9y3b",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 65,
+    "price": "41.9",
+    "sales": 3072,
+    "offerLink": "https://s.shopee.com.br/15WtBEoEN",
+    "nicho": "Tech_e_Gadgets",
+    "timestamp": 1773100142
   }
 ]
