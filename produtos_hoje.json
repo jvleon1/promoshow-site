@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Mini Máquina Seladora Portátil 2 Em 1 Saco Plástico Embalagen...",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m8hn0g4ohdrl49",
-    "ratingStar": "4.6",
-    "priceDiscountRate": 45,
-    "price": "21.9",
-    "sales": 3440,
-    "offerLink": "https://s.shopee.com.br/40bf8nozvX",
-    "nicho": "Cozinha",
-    "timestamp": 1773072421
-  },
-  {
     "productNameClean": "Panela de Pressão 7 litros Polida Fortlar",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m3owm461ccvse5",
     "ratingStar": "4.9",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/gLDeLSmLG",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773098341
+  },
+  {
+    "productNameClean": "Smartphone A07 256GB 8GB RAM Câmera Traseira Dupla 50MP...",
+    "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-82278-mhkhbx76p6o0a1",
+    "ratingStar": "5",
+    "priceDiscountRate": 16,
+    "price": "949.9",
+    "sales": 192,
+    "offerLink": "https://s.shopee.com.br/3VfP1xqEbx",
+    "nicho": "Tech_e_Gadgets",
+    "timestamp": 1773098702
   }
 ]
