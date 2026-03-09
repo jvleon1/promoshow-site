@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "MMA/TIG Solda Inversora Digital Bivolt 200A 110V/220V - Dobevi...",
-    "priceDiscountRate": 58,
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-mdcwquxttvr504",
-    "offerLink": "https://s.shopee.com.br/2LTR3yGlQ1",
-    "ratingStar": 4.8,
-    "sales": 215,
-    "price": 0,
-    "nicho": "Ferramentas",
-    "timestamp": 1773067381
-  },
-  {
     "productNameClean": "kit completo 06 unidades Utensílios de Inox de Alta Qualidade...",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81z1k-mioowsysuq6b21",
     "ratingStar": "4.9",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/10y3xbL2HJ",
     "nicho": "Beleza_e_Estilo",
     "timestamp": 1773093661
+  },
+  {
+    "productNameClean": "Kit 2 camisa polo masculina piquet blusa básica manga curta",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-md3ezte28rghcc",
+    "ratingStar": "4.7",
+    "priceDiscountRate": 41,
+    "price": "53.49",
+    "sales": 335,
+    "offerLink": "https://s.shopee.com.br/1VuKYvmQOu",
+    "nicho": "Beleza_e_Estilo",
+    "timestamp": 1773094021
   }
 ]
