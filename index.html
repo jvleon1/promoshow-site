@@ -100,24 +100,13 @@ body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:
 
 /* MOBILE */
 @media(max-width:860px) {
-  .layout { grid-template-columns:1fr; }
-
-  /* Sidebar vira carrossel horizontal compacto no topo */
-  .sidebar { border-right:none; border-bottom:1px solid var(--border); max-height:130px; min-height:130px; }
-  .sidebar-header { padding:10px 14px 8px; top:60px; }
-  .sidebar-title { font-size:12px; }
-  .sidebar-list { flex-direction:row; overflow-x:auto; overflow-y:hidden; flex-wrap:nowrap; padding:6px 10px; gap:8px; }
-  .sidebar-list::-webkit-scrollbar { height:2px; }
-  .produto-card { min-width:140px; max-width:140px; flex-direction:column; align-items:flex-start; padding:8px; gap:6px; }
-  .card-img { width:40px; height:40px; border-radius:7px; }
-  .card-name { font-size:10px; -webkit-line-clamp:2; }
-  .card-time { font-size:9px; position:absolute; top:8px; right:8px; }
-  .produto-card { position:relative; }
-
-  /* Campeão em coluna única */
-  .main { padding:14px; gap:14px; }
-  .main-header { gap:8px; }
-  .main-title { font-size:11px; }
+  .layout { display:flex; flex-direction:column; }
+  .main { order:1; padding:14px; gap:14px; }
+  .sidebar { order:2; border-right:none; border-top:1px solid var(--border); max-height:none; }
+  .sidebar-header { position:static; padding:14px 16px 10px; }
+  .sidebar-list { flex-direction:column; overflow-y:auto; overflow-x:hidden; max-height:60vh; padding:8px 10px; gap:8px; }
+  .produto-card { min-width:unset; flex-direction:row; align-items:center; }
+  .card-img { width:48px; height:48px; }
   .champion-wrap { grid-template-columns:1fr; border-radius:16px; }
   .champion-img-side { min-height:200px; padding:20px; }
   .champion-img { max-width:180px; }
