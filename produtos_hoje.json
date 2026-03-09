@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Espremedor Elétrico Laranja Limão Frutas Fazer Sucos Recarregável Usb",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-lqy7j7hfu7foe4",
-    "ratingStar": "4.6",
-    "priceDiscountRate": 54,
-    "price": "63.99",
-    "sales": 2349,
-    "offerLink": "https://s.shopee.com.br/4qAm7vIOa4",
-    "nicho": "Cozinha",
-    "timestamp": 1773072062
-  },
-  {
     "productNameClean": "Mini Máquina Seladora Portátil 2 Em 1 Saco Plástico Embalagen...",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m8hn0g4ohdrl49",
     "ratingStar": "4.6",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/807oMzv42x",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773097622
+  },
+  {
+    "productNameClean": "Mouse Sem Fio Optico Para Notebook Computadores Com Mini Adaptador...",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-lwpw0vlcxu4f74",
+    "ratingStar": "4.8",
+    "priceDiscountRate": 10,
+    "price": "20.48",
+    "sales": 658,
+    "offerLink": "https://s.shopee.com.br/gLDeLSmLG",
+    "nicho": "Tech_e_Gadgets",
+    "timestamp": 1773098341
   }
 ]
