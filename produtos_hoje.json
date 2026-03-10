@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Kit 3 Tapete de banheiro em formato de U absorvente...",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m7vgxscsf29uc9",
-    "ratingStar": "4.9",
-    "priceDiscountRate": 52,
-    "price": "42.99",
-    "sales": 410,
-    "offerLink": "https://s.shopee.com.br/1BHTwJHXpa",
-    "nicho": "Casa",
-    "timestamp": 1773081782
-  },
-  {
     "productNameClean": "Espelho Grande De Parede Oval Com Led Orgânico Banheiro Sala...",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-820md-mlgenqnnbuva0e",
     "ratingStar": "4.8",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/3fypMTvB3x",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773105876
+  },
+  {
+    "productNameClean": "Kit de Teclado e Mouse Bluetooth Sem Fio Macaron projetado...",
+    "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-7ra2e-m4u2ldvslryi6b",
+    "ratingStar": "4.7",
+    "priceDiscountRate": 75,
+    "price": "39.99",
+    "sales": 477,
+    "offerLink": "https://s.shopee.com.br/3qIFZCSRR1",
+    "nicho": "Tech_e_Gadgets",
+    "timestamp": 1773106235
   }
 ]
