@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Travesseiro Travisseiro Nasa Flex Alto Suporte Medio Comfort Antialergico Original",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-lyqnx5lumog135",
-    "ratingStar": "4.6",
-    "priceDiscountRate": 24,
-    "price": "37.96",
-    "sales": 2559,
-    "offerLink": "https://s.shopee.com.br/8fNV19mQde",
-    "nicho": "Casa",
-    "timestamp": 1773089699
-  },
-  {
     "productNameClean": "Blusa Regata Adulto Maculina Dry Fit Leve E Fresca Ideal...",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81ztc-mjsi7qz54bgh8d",
     "ratingStar": "4.7",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/3qIFj5iWtc",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773114874
+  },
+  {
+    "productNameClean": "【110V/220V】 Máquina Solda Inversora Profissional máquina de solda digital MMA-200/MMA-180/MMA-120~",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m9jsgdbtkz0921",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 54,
+    "price": "238.8",
+    "sales": 154,
+    "offerLink": "https://s.shopee.com.br/AKVjUuq3LJ",
+    "nicho": "Ferramentas",
+    "timestamp": 1773116515
   }
 ]
