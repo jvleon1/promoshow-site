@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Kit 4 Cadeados 20mm Reforçados com 2 Chaves Cada...",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81ztc-mirkabrvbabn00",
-    "ratingStar": "4.8",
-    "priceDiscountRate": 41,
-    "price": "25.5",
-    "sales": 568,
-    "offerLink": "https://s.shopee.com.br/2BA18yJsWQ",
-    "nicho": "Casa",
-    "timestamp": 1773082502
-  },
-  {
     "productNameClean": "Sistema de língua portuguesa Fechadura Digital Biométrica Eletronica Touch Biometria",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m8khgzi01tzlbf",
     "ratingStar": "4.7",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/BOxDHhnVs",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773106955
+  },
+  {
+    "productNameClean": "Cooler Fan CPU LED RGB Para Processador Ventoinha Gamer",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-820l5-mldunvu499fra4",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 65,
+    "price": "65.97",
+    "sales": 147,
+    "offerLink": "https://s.shopee.com.br/2g6ICIAZug",
+    "nicho": "Tech_e_Gadgets",
+    "timestamp": 1773107315
   }
 ]
