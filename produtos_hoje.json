@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Cortina Blackout PVC Corta 100% a Luz 2,80 m x...",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-mb474mel7ounad",
-    "ratingStar": "4.8",
-    "priceDiscountRate": 20,
-    "price": "64.34",
-    "sales": 4276,
-    "offerLink": "https://s.shopee.com.br/8ARELhnNcC",
-    "nicho": "Casa",
-    "timestamp": 1773085741
-  },
-  {
     "productNameClean": "Agua Perfumada Aromatizador de Ambiente Home Spray para Tecidos...",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m6790ksk4kvm62",
     "ratingStar": "4.9",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/70FHPxkQNo",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773110555
+  },
+  {
+    "productNameClean": "Massageador Pistol Elétrico Alta Frequência Profissional Muscular Relaxamento Portátil",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-ln7dac6rme9wa6",
+    "ratingStar": "4.8",
+    "priceDiscountRate": 63,
+    "price": "29.99",
+    "sales": 1121,
+    "offerLink": "https://s.shopee.com.br/6AgARFxnH1",
+    "nicho": "Tech_e_Gadgets",
+    "timestamp": 1773111275
   }
 ]
