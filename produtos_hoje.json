@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Agua Perfumada Aromatizador de Ambiente Home Spray para Tecidos...",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m6790ksk4kvm62",
-    "ratingStar": "4.9",
-    "priceDiscountRate": 63,
-    "price": "21.9",
-    "sales": 410,
-    "offerLink": "https://s.shopee.com.br/1qXAoTjOCb",
-    "nicho": "Casa",
-    "timestamp": 1773086101
-  },
-  {
     "productNameClean": "Refil para Água perfumada para tecidos, roupas e lençóis Via...",
     "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-7rccg-ltxr4xuc5v5z18",
     "ratingStar": "4.9",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/6AgARFxnH1",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773111275
+  },
+  {
+    "productNameClean": "Pasta Térmica | Rise Mode | Cold 5g | 8...",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81z1k-mfa13em7mbrb8f",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 25,
+    "price": "29.9",
+    "sales": 107,
+    "offerLink": "https://s.shopee.com.br/15X6KoyUu",
+    "nicho": "Tech_e_Gadgets",
+    "timestamp": 1773111635
   }
 ]
