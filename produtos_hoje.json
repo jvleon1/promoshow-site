@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Cortina Roma 2,40 x 1,70 Para Janela, Sala, Quarto, Decoração...",
-    "imageUrl": "https://cf.shopee.com.br/file/73744becb70af619af84ae1eff7b7e80",
-    "ratingStar": "4.6",
-    "priceDiscountRate": 40,
-    "price": "29.8",
-    "sales": 5625,
-    "offerLink": "https://s.shopee.com.br/5VQT3O7Z9t",
-    "nicho": "Casa",
-    "timestamp": 1773079261
-  },
-  {
     "productNameClean": "Rede De Dormir Descanso Casal Indiana Gigante TODA Reforçada 4M",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-mb89tsdysj9rfc",
     "ratingStar": "4.7",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/9AJls94Uuz",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773103741
+  },
+  {
+    "productNameClean": "Projetor 4K HD 150 Polegadas Celular, Tv B0x, Xbox, PS...",
+    "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-7rd3o-lx2aub8hs3tyd1",
+    "ratingStar": "4.5",
+    "priceDiscountRate": 66,
+    "price": "121.24",
+    "sales": 457,
+    "offerLink": "https://s.shopee.com.br/9zsss5dcjR",
+    "nicho": "Tech_e_Gadgets",
+    "timestamp": 1773104102
   }
 ]
