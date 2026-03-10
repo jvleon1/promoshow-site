@@ -185,5 +185,16 @@
     "price": 0,
     "nicho": "Cozinha",
     "timestamp": 1773161685
+  },
+  {
+    "productNameClean": "Máquina Seladora Embalagem A Vácuo Portátil Alimentos Bivolt Elétrica Embala...",
+    "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-8260w-mki7qkpjy41u30",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 30,
+    "price": "34.99",
+    "sales": 128,
+    "offerLink": "https://s.shopee.com.br/5L74PUI3C1",
+    "nicho": "Cozinha",
+    "timestamp": 1773163486
   }
 ]
