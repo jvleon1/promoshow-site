@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Banco De Plástico Dobrável Multiuso Banquinho 100kg Banqueta",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81z1k-mf8lkp8f9on854",
-    "ratingStar": "4.8",
-    "priceDiscountRate": 58,
-    "price": "20.99",
-    "sales": 1160,
-    "offerLink": "https://s.shopee.com.br/1gDkeEXz54",
-    "nicho": "Casa",
-    "timestamp": 1773087901
-  },
-  {
     "productNameClean": "Ferro de Passar Roupa a Seco 1300W FP100 - Kian",
     "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-7rat2-ma9xrouhjhry5a",
     "ratingStar": "4.9",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/50UD3w3q3Q",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773111995
+  },
+  {
+    "productNameClean": "Monitor Gaming Serie Tela Led Curva 27\" ou 23,6'' Full...",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81z1k-mgp8iihxujno4a",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 67,
+    "price": "589.99",
+    "sales": 280,
+    "offerLink": "https://s.shopee.com.br/30j8h5LVmS",
+    "nicho": "Tech_e_Gadgets",
+    "timestamp": 1773112715
   }
 ]
