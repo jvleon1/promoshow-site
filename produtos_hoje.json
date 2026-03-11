@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Pantufa feminina Aberta Em Pelúcia de Alta Qualidade",
-    "priceDiscountRate": 63,
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-lsr624wgovnfb2",
-    "offerLink": "https://s.shopee.com.br/4frNt9kDl1",
-    "ratingStar": 4.9,
-    "sales": 690,
-    "price": 0,
-    "nicho": "Beleza_e_Estilo",
-    "timestamp": 1773178245
-  },
-  {
     "productNameClean": "Vários modelos com Kit de 24 meia cano alto 100%...",
     "priceDiscountRate": 44,
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-mcbj0hdid3ajec",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/2VmuQoHNlW",
     "nicho": "Ferramentas",
     "timestamp": 1773239086
+  },
+  {
+    "productNameClean": "Gaabor Aspirador 2 em 1 16000Pa Sucção Forte 127V...",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81z1k-mfxmm60077yd84",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 47,
+    "price": "189",
+    "sales": 354,
+    "offerLink": "https://s.shopee.com.br/5Anfc7fGbM",
+    "nicho": "Ferramentas",
+    "timestamp": 1773239446
   }
 ]
