@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "1/2Rack de pratos em camadas sobre a pia Rack Escorredor...",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m8k98fweaxv5ec",
-    "ratingStar": "4.7",
-    "priceDiscountRate": 84,
-    "price": "77.99",
-    "sales": 1018,
-    "offerLink": "https://s.shopee.com.br/6Kzd62FP7T",
-    "nicho": "Cozinha",
-    "timestamp": 1773244486
-  },
-  {
     "productNameClean": "Prendedor Magnético Clipe Lacre Kit 12 Veda Fecha Alimentos Cozinha...",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-lq3s6x759li788",
     "ratingStar": "4.9",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/3VfSC5EmFt",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773270045
+  },
+  {
+    "productNameClean": "Conjunto De Canetas 3D Caneta De Impressão 3D Com 12...",
+    "imageUrl": "https://cf.shopee.com.br/file/cn-11134207-820l4-mlbiv0v03eh09b",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 50,
+    "price": "70",
+    "sales": 323,
+    "offerLink": "https://s.shopee.com.br/gLGpHxSgl",
+    "nicho": "Tech_e_Gadgets",
+    "timestamp": 1773270405
   }
 ]
