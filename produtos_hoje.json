@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Camiseta Básica 100% Algodão Masculina Feminina Unissex com Reforço Ombro...",
-    "priceDiscountRate": 52,
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m5d0fcghkhg06f",
-    "offerLink": "https://s.shopee.com.br/2qPjhNJIin",
-    "ratingStar": 4.6,
-    "sales": 1489,
-    "price": 0,
-    "nicho": "Beleza_e_Estilo",
-    "timestamp": 1773177885
-  },
-  {
     "productNameClean": "Pantufa feminina Aberta Em Pelúcia de Alta Qualidade",
     "priceDiscountRate": 63,
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-lsr624wgovnfb2",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/9zsvKwdVnA",
     "nicho": "Ferramentas",
     "timestamp": 1773237645
+  },
+  {
+    "productNameClean": "Esmerilhadeira Lixadeira Angular 950w 115mm 4.1/2 11000rpm",
+    "imageUrl": "https://cf.shopee.com.br/file/cn-11134207-820l4-mie5dzfdkr9k49",
+    "ratingStar": "4.7",
+    "priceDiscountRate": 52,
+    "price": "117.99",
+    "sales": 656,
+    "offerLink": "https://s.shopee.com.br/2VmuQoHNlW",
+    "nicho": "Ferramentas",
+    "timestamp": 1773239086
   }
 ]
