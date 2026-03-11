@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Óleo Clareador de Axilas e Virilha Secrets Woman (110 ml)...",
-    "priceDiscountRate": 50,
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m94p0fvv116h04",
-    "offerLink": "https://s.shopee.com.br/900N13kZgr",
-    "ratingStar": 4.9,
-    "sales": 1557,
-    "price": 0,
-    "nicho": "Beleza_e_Estilo",
-    "timestamp": 1773176445
-  },
-  {
     "productNameClean": "Balança Corporal Digital Até 180kg Com Vidro Temperado Premium",
     "priceDiscountRate": 20,
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-mayaqtr0iu49a4",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/9UwefUeOUI",
     "nicho": "Ferramentas",
     "timestamp": 1773233686
+  },
+  {
+    "productNameClean": "Lavadora de Alta Pressão Pistola Portátil Profissional Sem Fio Recarregável...",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m4g8xopn148xfe",
+    "ratingStar": "4.7",
+    "priceDiscountRate": 35,
+    "price": "109.99",
+    "sales": 1653,
+    "offerLink": "https://s.shopee.com.br/60MmWIVCvi",
+    "nicho": "Ferramentas",
+    "timestamp": 1773234766
   }
 ]
