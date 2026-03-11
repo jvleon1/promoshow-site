@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "WHEY 900G Novos sabores melhor que pro fit creatina academia...",
-    "priceDiscountRate": 80,
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m2859dhbzc6p04",
-    "offerLink": "https://s.shopee.com.br/70FIeCxz9P",
-    "ratingStar": 4.7,
-    "sales": 1877,
-    "price": 0,
-    "nicho": "Beleza_e_Estilo",
-    "timestamp": 1773177165
-  },
-  {
     "productNameClean": "Kit 06 Esfoliante Hidratante Corporal Bisnaga100g Soul Cosméticos",
     "priceDiscountRate": 56,
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81z1k-mi1oile8bitd06",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/6VJ37d1Grz",
     "nicho": "Ferramentas",
     "timestamp": 1773235125
+  },
+  {
+    "productNameClean": "Mochila Térmica 25L com Isolamento para Bebidas e Alimentos...",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-mdqozevnqsvt81",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 73,
+    "price": "52.99",
+    "sales": 848,
+    "offerLink": "https://s.shopee.com.br/qegNcv17b",
+    "nicho": "Ferramentas",
+    "timestamp": 1773235485
   }
 ]
