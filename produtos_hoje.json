@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Cozedor de Ovos Portátil 110V – Prático, Rápido e Saudável...",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81z1k-mhng0i68ia69c0",
-    "ratingStar": "4.8",
-    "priceDiscountRate": 43,
-    "price": "39.99",
-    "sales": 113,
-    "offerLink": "https://s.shopee.com.br/4frP45WFm5",
-    "nicho": "Cozinha",
-    "timestamp": 1773241966
-  },
-  {
     "productNameClean": "Marmita Elétrica Veicular 12v/bivolt Aquecedor De Alimentos",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-ma4m4l0q4pon2e",
     "ratingStar": "4.9",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/4LEZ8jMWO0",
     "nicho": "Beleza_e_Estilo",
     "timestamp": 1773267526
+  },
+  {
+    "productNameClean": "Óleo de Banho Dove Sabonete Líquido 240mL",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-mauaa7erjuz322",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 13,
+    "price": "34.8",
+    "sales": 1567,
+    "offerLink": "https://s.shopee.com.br/900OhicW6d",
+    "nicho": "Beleza_e_Estilo",
+    "timestamp": 1773267885
   }
 ]
