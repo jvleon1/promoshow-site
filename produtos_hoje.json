@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "MODUS Garrafa Térmica Isolada a Vácuo De Inox 1700ml Grande...",
-    "priceDiscountRate": 69,
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81ztc-mkapa90psf0geb",
-    "offerLink": "https://s.shopee.com.br/8fNWiDQHjb",
-    "ratingStar": 5,
-    "sales": 2737,
-    "price": 0,
-    "nicho": "Beleza_e_Estilo",
-    "timestamp": 1773181485
-  },
-  {
     "productNameClean": "Creatina Monohidratada 300g - 100% Pura Fórmula Avançada Com Matéria-prima...",
     "priceDiscountRate": 61,
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-lr86myikshl9c4",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/4frP45WFm5",
     "nicho": "Cozinha",
     "timestamp": 1773241966
+  },
+  {
+    "productNameClean": "Marmita Elétrica Veicular 12v/bivolt Aquecedor De Alimentos",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-ma4m4l0q4pon2e",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 54,
+    "price": "78.99",
+    "sales": 864,
+    "offerLink": "https://s.shopee.com.br/9AJoQln1LF",
+    "nicho": "Cozinha",
+    "timestamp": 1773242326
   }
 ]
