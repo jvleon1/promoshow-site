@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Kit 06 Esfoliante Hidratante Corporal Bisnaga100g Soul Cosméticos",
-    "priceDiscountRate": 56,
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81z1k-mi1oile8bitd06",
-    "offerLink": "https://s.shopee.com.br/8fNWdgPCAJ",
-    "ratingStar": 4.9,
-    "sales": 217,
-    "price": 0,
-    "nicho": "Beleza_e_Estilo",
-    "timestamp": 1773177528
-  },
-  {
     "productNameClean": "Camiseta Básica 100% Algodão Masculina Feminina Unissex com Reforço Ombro...",
     "priceDiscountRate": 52,
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m5d0fcghkhg06f",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/qegNcv17b",
     "nicho": "Ferramentas",
     "timestamp": 1773235485
+  },
+  {
+    "productNameClean": "Kit Furadeira / Parafusadeira E Lixadeira / Serra Tico Tico...",
+    "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-7ra2r-m4u5wu23tg8bd3",
+    "ratingStar": "4.7",
+    "priceDiscountRate": 75,
+    "price": "115.8",
+    "sales": 599,
+    "offerLink": "https://s.shopee.com.br/9zsvKwdVnA",
+    "nicho": "Ferramentas",
+    "timestamp": 1773237645
   }
 ]
