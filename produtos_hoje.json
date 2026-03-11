@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Fatiador Ralador 16 em 1 Profissional de Cozinha em Aço...",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81ztc-mjqenullkow37c",
-    "ratingStar": "4.8",
-    "priceDiscountRate": 68,
-    "price": "24.98",
-    "sales": 2758,
-    "offerLink": "https://s.shopee.com.br/7fV0i8LiRK",
-    "nicho": "Cozinha",
-    "timestamp": 1773245926
-  },
-  {
     "productNameClean": "Panela de Pressão Elétrica 6L 1000W PPE102 - Kian",
     "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-824i6-mf9p0jie6byk23",
     "ratingStar": "4.9",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/8pgyZ7YNJj",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773271125
+  },
+  {
+    "productNameClean": "Kit Teclado e Mouse Sem Fio Tablet Celular Bluetooth Portátil...",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m8zgieqwb22h93",
+    "ratingStar": "4.8",
+    "priceDiscountRate": 60,
+    "price": "39.8",
+    "sales": 587,
+    "offerLink": "https://s.shopee.com.br/8ARHmJ8wuv",
+    "nicho": "Tech_e_Gadgets",
+    "timestamp": 1773271486
   }
 ]
