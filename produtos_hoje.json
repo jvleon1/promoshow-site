@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Kit Conjunto 19 Pçs De Utensílios Facas Silicone e Plástico...",
-    "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-7renk-m1xc44ie67goa3",
-    "ratingStar": "4.6",
-    "priceDiscountRate": 73,
-    "price": "55.98",
-    "sales": 1005,
-    "offerLink": "https://s.shopee.com.br/6Kzd2KK6zc",
-    "nicho": "Cozinha",
-    "timestamp": 1773241246
-  },
-  {
     "productNameClean": "Tesoura de Cozinha Multiuso Aço Inox 20cm - Corta Carnes...",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81ztc-mj858a350geaee",
     "ratingStar": "4.9",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/5Ang6cCIAf",
     "nicho": "Beleza_e_Estilo",
     "timestamp": 1773266086
+  },
+  {
+    "productNameClean": "NIVEA Creme Facial Antissinais 100g BBB 26",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-820lc-ml83lso4whdzd8",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 24,
+    "price": "31.9",
+    "sales": 1466,
+    "offerLink": "https://s.shopee.com.br/6pvu65ZRiY",
+    "nicho": "Beleza_e_Estilo",
+    "timestamp": 1773266445
   }
 ]
