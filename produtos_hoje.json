@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Gaabor Aspirador 2 em 1 16000Pa Sucção Forte 127V...",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81z1k-mfxmm60077yd84",
-    "ratingStar": "4.9",
-    "priceDiscountRate": 47,
-    "price": "189",
-    "sales": 354,
-    "offerLink": "https://s.shopee.com.br/5Anfc7fGbM",
-    "nicho": "Ferramentas",
-    "timestamp": 1773239446
-  },
-  {
     "productNameClean": "Lavadora de Alta Pressão Potente Compacta 1200W Porta Detergente Lav1300...",
     "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-7reou-m83egtsfqg7rd7",
     "ratingStar": "4.9",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/2LTUiAeqVo",
     "nicho": "Beleza_e_Estilo",
     "timestamp": 1773265006
+  },
+  {
+    "productNameClean": "Kit 2 Hi Cool Crystal Vegan Desodorante Em Bastão ...",
+    "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-822xk-mi00pr0khkw54f",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 32,
+    "price": "29.99",
+    "sales": 1280,
+    "offerLink": "https://s.shopee.com.br/W1qXDJWAu",
+    "nicho": "Beleza_e_Estilo",
+    "timestamp": 1773265366
   }
 ]
