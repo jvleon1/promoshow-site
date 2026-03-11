@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Balança Corporal Digital Até 180kg Com Vidro Temperado Premium",
-    "priceDiscountRate": 20,
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-mayaqtr0iu49a4",
-    "offerLink": "https://s.shopee.com.br/15YIvqSbD",
-    "ratingStar": 4.9,
-    "sales": 1118,
-    "price": 0,
-    "nicho": "Beleza_e_Estilo",
-    "timestamp": 1773176805
-  },
-  {
     "productNameClean": "WHEY 900G Novos sabores melhor que pro fit creatina academia...",
     "priceDiscountRate": 80,
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m2859dhbzc6p04",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/60MmWIVCvi",
     "nicho": "Ferramentas",
     "timestamp": 1773234766
+  },
+  {
+    "productNameClean": "Kit Mini Disco Serra Circular Micro Retifica Furadaira Profissional",
+    "imageUrl": "https://cf.shopee.com.br/file/cn-11134207-7ras8-m6dvpg8jgeq320",
+    "ratingStar": "4.8",
+    "priceDiscountRate": 27,
+    "price": "21.9",
+    "sales": 1502,
+    "offerLink": "https://s.shopee.com.br/6VJ37d1Grz",
+    "nicho": "Ferramentas",
+    "timestamp": 1773235125
   }
 ]
