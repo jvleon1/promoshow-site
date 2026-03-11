@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Vários modelos com Kit de 24 meia cano alto 100%...",
-    "priceDiscountRate": 44,
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-mcbj0hdid3ajec",
-    "offerLink": "https://s.shopee.com.br/4Av7IeKMmV",
-    "ratingStar": 4.7,
-    "sales": 1843,
-    "price": 0,
-    "nicho": "Beleza_e_Estilo",
-    "timestamp": 1773178605
-  },
-  {
     "productNameClean": "Gel Pós Barba 350g – Yabae - Pele Sem Irritação...",
     "priceDiscountRate": 10,
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81z1k-mh7qt5kncw076c",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/5Anfc7fGbM",
     "nicho": "Ferramentas",
     "timestamp": 1773239446
+  },
+  {
+    "productNameClean": "Lavadora de Alta Pressão Potente Compacta 1200W Porta Detergente Lav1300...",
+    "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-7reou-m83egtsfqg7rd7",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 18,
+    "price": "329.9",
+    "sales": 2343,
+    "offerLink": "https://s.shopee.com.br/7KsACW53Qk",
+    "nicho": "Ferramentas",
+    "timestamp": 1773239806
   }
 ]
