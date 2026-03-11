@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Kit Com 12 Ou 6 Cuecas Boxers Premium Masculina Adulto...",
-    "priceDiscountRate": 47,
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81ztc-mjrase1t7e2q3c",
-    "offerLink": "https://s.shopee.com.br/4frNvDTv2q",
-    "ratingStar": 4.7,
-    "sales": 2023,
-    "price": 0,
-    "nicho": "Beleza_e_Estilo",
-    "timestamp": 1773180045
-  },
-  {
     "productNameClean": "TRAVESSEIRO PARA VIAGEM H COM ALMOFADA PARA PESCOÇO FIBRA SILICONADA",
     "priceDiscountRate": 37,
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81ztc-mkbdxxy3ib5s85",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/6Kzd2KK6zc",
     "nicho": "Cozinha",
     "timestamp": 1773241246
+  },
+  {
+    "productNameClean": "Tesoura de Cozinha Multiuso Aço Inox 20cm - Corta Carnes...",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81ztc-mj858a350geaee",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 61,
+    "price": "38.8",
+    "sales": 1222,
+    "offerLink": "https://s.shopee.com.br/7KsAEZoXyN",
+    "nicho": "Cozinha",
+    "timestamp": 1773241606
   }
 ]
