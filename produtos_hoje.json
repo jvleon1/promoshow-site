@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Fritadeira Sem Óleo AirFryer HQ 4,8 litros Digital Preto HQ-AF4.8LDP",
-    "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-7ratp-mawvb9ndgk82fd",
-    "ratingStar": "4.9",
-    "priceDiscountRate": 26,
-    "price": "188.42",
-    "sales": 127,
-    "offerLink": "https://s.shopee.com.br/9AJoXm9h7g",
-    "nicho": "Cozinha",
-    "timestamp": 1773248447
-  },
-  {
     "productNameClean": "Copo Liquidificador Philco Ph700 Ph900 Ph1200 PLQ1212 PLQ1412 Preto...",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m66ypugivcsl18",
     "ratingStar": "4.7",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/4Av92C1b5v",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773272565
+  },
+  {
+    "productNameClean": "Xiaomi Redmi 14C 8GB+256GB RAM,4GB+128GB RAM",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81ztc-mizropp3deyued",
+    "ratingStar": "4.8",
+    "priceDiscountRate": 52,
+    "price": "719",
+    "sales": 251,
+    "offerLink": "https://s.shopee.com.br/5VQWfWq8qY",
+    "nicho": "Tech_e_Gadgets",
+    "timestamp": 1773275086
   }
 ]
