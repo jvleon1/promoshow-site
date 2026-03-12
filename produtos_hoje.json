@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Kit Churrasco 2 pçs Faca Personalizado Garfo C/ Estojo Presente",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81zu6-ml2h6vmy2y9v24",
-    "ratingStar": "4.7",
-    "priceDiscountRate": 50,
-    "price": "32.9",
-    "sales": 180,
-    "offerLink": "https://s.shopee.com.br/3B2bPz62RE",
-    "nicho": "Cozinha",
-    "timestamp": 1773249528
-  },
-  {
     "productNameClean": "Cozedor Elétrico Multifuncional De Ovo Milho A Vapor Rápido 110v",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98r-lm8zd3b2a78r76",
     "ratingStar": "4.8",
@@ -548,5 +537,16 @@
     "offerLink": "https://s.shopee.com.br/1VuNv06las",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773275806
+  },
+  {
+    "productNameClean": "WS-858 - Microfone Infantil de Karaoke Microfone de Brinquedo Sem...",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7qukw-lhns9z8fs3uf7f",
+    "ratingStar": "4.8",
+    "priceDiscountRate": 22,
+    "price": "27.9",
+    "sales": 1617,
+    "offerLink": "https://s.shopee.com.br/2LTUuwbhOa",
+    "nicho": "Tech_e_Gadgets",
+    "timestamp": 1773276166
   }
 ]
