@@ -112,12 +112,12 @@ tr:hover td { background:rgba(255,255,255,0.02); }
     <div class="card-title">Adicionar Produto</div>
     <div class="form-grid three">
       <div class="field">
-        <label>Item ID</label>
-        <input type="text" id="f-itemId" placeholder="Ex: 53004425105">
+        <label>Shop ID (1º número da URL)</label>
+        <input type="text" id="f-shopId" placeholder="Ex: 1006215031">
       </div>
       <div class="field">
-        <label>Shop ID</label>
-        <input type="text" id="f-shopId" placeholder="Ex: 1006215031">
+        <label>Item ID (2º número da URL)</label>
+        <input type="text" id="f-itemId" placeholder="Ex: 53004425105">
       </div>
       <div class="field">
         <label>Nicho</label>
@@ -183,7 +183,7 @@ tr:hover td { background:rgba(255,255,255,0.02); }
 
 <script>
 const SENHA = 'promo2026';
-const WEBHOOK_URL = 'http://localhost:5678/webhook/produtos-admin';
+const WEBHOOK_URL = 'SEU_WEBHOOK_N8N_AQUI';
 
 function entrar(){
   if(document.getElementById('senhaInput').value === SENHA){
