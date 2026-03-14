@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Produtos — PromoShow</title>
+<style>
+:root { --bg:#080808; --surface:#111; --surface2:#181818; --border:rgba(255,255,255,0.08); --text:#f0f0f0; --muted:rgba(255,255,255,0.4); --accent:#FF6B00; --glow:rgba(255,107,0,0.3); --green:#4ade80; --red:#f87171; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--text); font-family:'Segoe UI',sans-serif; min-height:100vh; padding:20px; }
+
+#loginScreen { width:100%; max-width:360px; margin:80px auto; }
+.login-box { background:var(--surface); border:1px solid var(--border); border-radius:18px; padding:36px 32px; }
+.login-logo { font-size:28px; font-weight:800; letter-spacing:2px; color:var(--accent); text-align:center; margin-bottom:6px; }
+.login-sub { font-size:12px; color:var(--muted); text-align:center; letter-spacing:1px; text-transform:uppercase; margin-bottom:28px; }
+.login-error { background:rgba(255,60,60,0.1); border:1px solid rgba(255,60,60,0.3); color:var(--red); font-size:13px; padding:10px 14px; border-radius:8px; margin-bottom:16px; display:none; }
+
+#adminScreen { max-width:860px; margin:0 auto; display:none; }
+.admin-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; padding-top:20px; }
+.admin-title { font-size:20px; font-weight:700; }
+.admin-title span { color:var(--accent); }
+.logout-btn { font-size:12px; color:var(--muted); cursor:pointer; padding:6px 14px; border:1px solid var(--border); border-radius:50px; background:none; transition:color 0.2s; }
+.logout-btn:hover { color:var(--text); }
+
+.card { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:24px; margin-bottom:16px; }
+.card-title { font-size:12px; font-weight:700; letter-spacing:2px; color:var(--muted); text-transform:uppercase; margin-bottom:18px; }
+
+.form-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.form-grid.three { grid-template-columns:1fr 1fr 1fr; }
+.field { display:flex; flex-direction:column; gap:6px; }
+.field.full { grid-column:1/-1; }
+.field label { font-size:11px; color:var(--muted); letter-spacing:1px; text-transform:uppercase; }
+.field input, .field select { background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:10px 14px; color:var(--text); font-size:14px; outline:none; transition:border-color 0.2s; }
+.field input:focus, .field select:focus { border-color:rgba(255,107,0,0.4); }
+.field select option { background:var(--surface2); }
+
+.btn { padding:11px 20px; border-radius:10px; font-size:13px; font-weight:700; letter-spacing:1px; cursor:pointer; border:none; transition:transform 0.15s, opacity 0.15s; }
+.btn:hover { transform:translateY(-1px); }
+.btn:disabled { opacity:0.5; cursor:not-allowed; transform:none; }
+.btn-primary { background:linear-gradient(135deg,#FF6B00,#FF3D00); color:white; box-shadow:0 4px 14px var(--glow); }
+.btn-outline { background:transparent; border:1px solid var(--border); color:var(--muted); }
+.btn-outline:hover { color:var(--text); border-color:rgba(255,255,255,0.2); }
+
+/* TABELA */
+.table-wrap { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+th { text-align:left; padding:10px 12px; font-size:11px; letter-spacing:1px; color:var(--muted); text-transform:uppercase; border-bottom:1px solid var(--border); }
+td { padding:12px 12px; border-bottom:1px solid var(--border); vertical-align:middle; }
+tr:last-child td { border-bottom:none; }
+tr:hover td { background:rgba(255,255,255,0.02); }
+
+.badge-nicho { font-size:10px; font-weight:700; padding:3px 8px; border-radius:50px; }
+.badge-ativo { background:rgba(74,222,128,0.12); color:var(--green); }
+.badge-inativo { background:rgba(248,113,113,0.12); color:var(--red); }
+
+.td-obs { max-width:160px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:var(--muted); }
+.td-id { font-family:monospace; font-size:11px; color:var(--muted); }
+
+.action-btns { display:flex; gap:6px; }
+.btn-sm { padding:5px 10px; font-size:11px; border-radius:7px; cursor:pointer; border:none; font-weight:700; transition:opacity 0.2s; }
+.btn-sm:hover { opacity:0.8; }
+.btn-toggle-on { background:rgba(74,222,128,0.15); color:var(--green); border:1px solid rgba(74,222,128,0.3); }
+.btn-toggle-off { background:rgba(248,113,113,0.15); color:var(--red); border:1px solid rgba(248,113,113,0.3); }
+.btn-del { background:rgba(248,113,113,0.1); color:var(--red); border:1px solid rgba(248,113,113,0.2); }
+
+.empty-list { text-align:center; padding:40px; color:var(--muted); font-size:14px; }
+.loading { text-align:center; padding:30px; color:var(--muted); font-size:13px; }
+
+.toast { position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(80px); background:var(--surface); border:1px solid var(--border); padding:12px 24px; border-radius:50px; font-size:14px; font-weight:600; transition:transform 0.3s; z-index:999; white-space:nowrap; }
+.toast.show { transform:translateX(-50%) translateY(0); }
+.toast.success { border-color:rgba(74,222,128,0.4); color:var(--green); }
+.toast.error { border-color:rgba(255,60,60,0.4); color:var(--red); }
+
+.confirm-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.7); display:none; align-items:center; justify-content:center; z-index:998; }
+.confirm-overlay.show { display:flex; }
+.confirm-box { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:28px 32px; max-width:360px; width:90%; text-align:center; }
+.confirm-title { font-size:16px; font-weight:700; margin-bottom:8px; }
+.confirm-sub { font-size:13px; color:var(--muted); margin-bottom:24px; }
+.confirm-btns { display:flex; gap:10px; justify-content:center; }
+
+@media(max-width:600px) {
+  .form-grid, .form-grid.three { grid-template-columns:1fr; }
+  .field.full { grid-column:1; }
+}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginScreen">
+  <div class="login-box">
+    <div class="login-logo">PS</div>
+    <div class="login-sub">Produtos Manuais · Admin</div>
+    <div class="login-error" id="loginError">Senha incorreta.</div>
+    <div class="field" style="margin-bottom:14px">
+      <label>SENHA</label>
+      <input type="password" id="senhaInput" placeholder="••••••••" onkeydown="if(event.key==='Enter')entrar()">
+    </div>
+    <button class="btn btn-primary" style="width:100%;padding:14px" onclick="entrar()">Entrar</button>
+  </div>
+</div>
+
+<!-- ADMIN -->
+<div id="adminScreen">
+  <div class="admin-header">
+    <div class="admin-title">Produtos <span>Manuais</span></div>
+    <button class="logout-btn" onclick="sair()">Sair</button>
+  </div>
+
+  <!-- Formulário adicionar -->
+  <div class="card">
+    <div class="card-title">Adicionar Produto</div>
+    <div class="form-grid three">
+      <div class="field">
+        <label>Item ID</label>
+        <input type="text" id="f-itemId" placeholder="Ex: 53004425105">
+      </div>
+      <div class="field">
+        <label>Shop ID</label>
+        <input type="text" id="f-shopId" placeholder="Ex: 1006215031">
+      </div>
+      <div class="field">
+        <label>Nicho</label>
+        <select id="f-nicho">
+          <option value="">Selecione...</option>
+          <option value="Cozinha">🍳 Cozinha</option>
+          <option value="Casa">🏠 Casa</option>
+          <option value="Tech_e_Gadgets">📱 Tech & Gadgets</option>
+          <option value="Beleza_e_Estilo">💄 Beleza & Estilo</option>
+          <option value="Ferramentas">🔧 Ferramentas</option>
+        </select>
+      </div>
+      <div class="field full">
+        <label>Observação (por que esse produto é bom?)</label>
+        <input type="text" id="f-obs" placeholder="Ex: Fone KZ excelente custo-benefício, viral no YouTube">
+      </div>
+    </div>
+    <div style="margin-top:14px;display:flex;gap:10px">
+      <button class="btn btn-primary" id="addBtn" onclick="adicionarProduto()">+ Adicionar</button>
+      <button class="btn btn-outline" onclick="limparForm()">Limpar</button>
+    </div>
+  </div>
+
+  <!-- Lista -->
+  <div class="card">
+    <div class="card-title" style="display:flex;align-items:center;justify-content:space-between">
+      <span>Produtos Cadastrados</span>
+      <button class="btn btn-outline" style="padding:6px 14px;font-size:11px" onclick="carregarProdutos()">↻ Atualizar</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Observação</th>
+            <th>Nicho</th>
+            <th>Item ID</th>
+            <th>Shop ID</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="produtosList">
+          <tr><td colspan="6" class="loading">Carregando...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Confirm dialog -->
+<div class="confirm-overlay" id="confirmOverlay">
+  <div class="confirm-box">
+    <div class="confirm-title" id="confirmTitle">Confirmar</div>
+    <div class="confirm-sub" id="confirmSub">Tem certeza?</div>
+    <div class="confirm-btns">
+      <button class="btn btn-outline" onclick="fecharConfirm()">Cancelar</button>
+      <button class="btn btn-primary" id="confirmOkBtn">Confirmar</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const SENHA = 'promo2026';
+const WEBHOOK_URL = 'SEU_WEBHOOK_N8N_AQUI';
+
+function entrar(){
+  if(document.getElementById('senhaInput').value === SENHA){
+    document.getElementById('loginScreen').style.display = 'none';
+    document.getElementById('adminScreen').style.display = 'block';
+    carregarProdutos();
+  } else {
+    document.getElementById('loginError').style.display = 'block';
+    document.getElementById('senhaInput').value = '';
+  }
+}
+
+function sair(){
+  document.getElementById('loginScreen').style.display = 'block';
+  document.getElementById('adminScreen').style.display = 'none';
+  document.getElementById('senhaInput').value = '';
+}
+
+async function chamarWebhook(acao, dados){
+  const res = await fetch(WEBHOOK_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ acao, ...dados })
+  });
+  if(!res.ok) throw new Error('Erro na requisição');
+  return res.json();
+}
+
+async function carregarProdutos(){
+  const tbody = document.getElementById('produtosList');
+  tbody.innerHTML = '<tr><td colspan="6" class="loading">Carregando...</td></tr>';
+  try {
+    const data = await chamarWebhook('listar', {});
+    const produtos = data.produtos || [];
+    if(produtos.length === 0){
+      tbody.innerHTML = '<tr><td colspan="6" class="empty-list">Nenhum produto cadastrado ainda.</td></tr>';
+      return;
+    }
+    const nichoEmoji = { 'Cozinha':'🍳', 'Casa':'🏠', 'Tech_e_Gadgets':'📱', 'Beleza_e_Estilo':'💄', 'Ferramentas':'🔧' };
+    tbody.innerHTML = produtos.map(p => `
+      <tr>
+        <td class="td-obs" title="${p.observacao||''}">${p.observacao||'—'}</td>
+        <td><span class="badge-nicho" style="background:rgba(255,107,0,0.1);color:#FF6B00">${nichoEmoji[p.nicho]||''} ${p.nicho||'—'}</span></td>
+        <td class="td-id">${p.itemId}</td>
+        <td class="td-id">${p.shopId}</td>
+        <td><span class="badge-nicho ${p.ativo ? 'badge-ativo' : 'badge-inativo'}">${p.ativo ? 'Ativo' : 'Inativo'}</span></td>
+        <td>
+          <div class="action-btns">
+            <button class="btn-sm ${p.ativo ? 'btn-toggle-off' : 'btn-toggle-on'}" onclick="toggleProduto('${p.id}', ${p.ativo})">${p.ativo ? 'Desativar' : 'Ativar'}</button>
+            <button class="btn-sm btn-del" onclick="confirmarDeletar('${p.id}', '${(p.observacao||p.itemId).replace(/'/g,"\\'")}')">Deletar</button>
+          </div>
+        </td>
+      </tr>
+    `).join('');
+  } catch(e){
+    tbody.innerHTML = '<tr><td colspan="6" class="empty-list">Erro ao carregar. Verifique o webhook.</td></tr>';
+  }
+}
+
+async function adicionarProduto(){
+  const itemId = document.getElementById('f-itemId').value.trim();
+  const shopId = document.getElementById('f-shopId').value.trim();
+  const nicho  = document.getElementById('f-nicho').value;
+  const obs    = document.getElementById('f-obs').value.trim();
+
+  if(!itemId || !shopId || !nicho){
+    mostrarToast('Preencha Item ID, Shop ID e Nicho!', 'error');
+    return;
+  }
+
+  const btn = document.getElementById('addBtn');
+  btn.disabled = true;
+  btn.textContent = 'Adicionando...';
+
+  try {
+    await chamarWebhook('adicionar', { itemId: Number(itemId), shopId: Number(shopId), nicho, observacao: obs, ativo: true });
+    mostrarToast('✅ Produto adicionado!', 'success');
+    limparForm();
+    carregarProdutos();
+  } catch(e){
+    mostrarToast('❌ Erro ao adicionar.', 'error');
+  }
+
+  btn.disabled = false;
+  btn.textContent = '+ Adicionar';
+}
+
+async function toggleProduto(id, ativoAtual){
+  try {
+    await chamarWebhook('toggle', { id, ativo: !ativoAtual });
+    mostrarToast(ativoAtual ? '⏸ Produto desativado' : '▶ Produto ativado', 'success');
+    carregarProdutos();
+  } catch(e){
+    mostrarToast('❌ Erro ao atualizar.', 'error');
+  }
+}
+
+let deletarIdPendente = null;
+function confirmarDeletar(id, nome){
+  deletarIdPendente = id;
+  document.getElementById('confirmTitle').textContent = 'Deletar Produto';
+  document.getElementById('confirmSub').textContent = `Deletar "${nome}"? Essa ação não pode ser desfeita.`;
+  document.getElementById('confirmOkBtn').onclick = executarDeletar;
+  document.getElementById('confirmOverlay').classList.add('show');
+}
+
+async function executarDeletar(){
+  fecharConfirm();
+  try {
+    await chamarWebhook('deletar', { id: deletarIdPendente });
+    mostrarToast('🗑 Produto deletado!', 'success');
+    carregarProdutos();
+  } catch(e){
+    mostrarToast('❌ Erro ao deletar.', 'error');
+  }
+}
+
+function fecharConfirm(){
+  document.getElementById('confirmOverlay').classList.remove('show');
+  deletarIdPendente = null;
+}
+
+function limparForm(){
+  document.getElementById('f-itemId').value = '';
+  document.getElementById('f-shopId').value = '';
+  document.getElementById('f-nicho').value = '';
+  document.getElementById('f-obs').value = '';
+}
+
+function mostrarToast(msg, tipo){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `toast ${tipo} show`;
+  setTimeout(() => t.className = 'toast', 3000);
+}
+</script>
+</body>
+</html>
