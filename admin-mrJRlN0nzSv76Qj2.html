@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — PromoShow</title>
+<style>
+:root { --bg:#080808; --surface:#111; --surface2:#181818; --border:rgba(255,255,255,0.08); --text:#f0f0f0; --muted:rgba(255,255,255,0.4); --accent:#FF6B00; --glow:rgba(255,107,0,0.3); }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--text); font-family:'Segoe UI',sans-serif; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:20px; }
+
+/* LOGIN */
+#loginScreen { width:100%; max-width:360px; }
+.login-box { background:var(--surface); border:1px solid var(--border); border-radius:18px; padding:36px 32px; }
+.login-logo { font-size:28px; font-weight:800; letter-spacing:2px; color:var(--accent); text-align:center; margin-bottom:6px; }
+.login-sub { font-size:12px; color:var(--muted); text-align:center; letter-spacing:1px; text-transform:uppercase; margin-bottom:28px; }
+.login-error { background:rgba(255,60,60,0.1); border:1px solid rgba(255,60,60,0.3); color:#ff6b6b; font-size:13px; padding:10px 14px; border-radius:8px; margin-bottom:16px; display:none; }
+
+/* ADMIN */
+#adminScreen { width:100%; max-width:640px; display:none; }
+.admin-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; }
+.admin-title { font-size:20px; font-weight:700; letter-spacing:1px; }
+.admin-title span { color:var(--accent); }
+.logout-btn { font-size:12px; color:var(--muted); cursor:pointer; padding:6px 12px; border:1px solid var(--border); border-radius:50px; background:none; color:var(--muted); transition:color 0.2s; }
+.logout-btn:hover { color:var(--text); }
+
+.card { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:24px; margin-bottom:16px; }
+.card-title { font-size:13px; font-weight:700; letter-spacing:2px; color:var(--muted); text-transform:uppercase; margin-bottom:16px; }
+
+.field { margin-bottom:14px; }
+.field label { display:block; font-size:12px; color:var(--muted); margin-bottom:6px; letter-spacing:1px; }
+.field input, .field textarea { width:100%; background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:10px 14px; color:var(--text); font-size:14px; outline:none; transition:border-color 0.2s; font-family:inherit; }
+.field input:focus, .field textarea:focus { border-color:rgba(255,107,0,0.4); }
+.field textarea { resize:vertical; min-height:80px; }
+.field .hint { font-size:11px; color:var(--muted); margin-top:4px; }
+
+.toggle-row { display:flex; align-items:center; justify-content:space-between; }
+.toggle-label { font-size:14px; }
+.toggle { position:relative; width:44px; height:24px; cursor:pointer; }
+.toggle input { opacity:0; width:0; height:0; }
+.toggle-slider { position:absolute; inset:0; background:var(--surface2); border:1px solid var(--border); border-radius:50px; transition:0.3s; }
+.toggle-slider::before { content:''; position:absolute; width:18px; height:18px; left:2px; top:2px; background:var(--muted); border-radius:50%; transition:0.3s; }
+.toggle input:checked + .toggle-slider { background:var(--accent); border-color:var(--accent); }
+.toggle input:checked + .toggle-slider::before { transform:translateX(20px); background:white; }
+
+.preview-box { background:var(--surface2); border:1px solid var(--border); border-radius:12px; padding:16px; min-height:60px; }
+.preview-titulo { font-size:18px; font-weight:700; margin-bottom:6px; }
+.preview-texto { font-size:13px; color:var(--muted); line-height:1.6; margin-bottom:10px; }
+.preview-youtube { width:100%; aspect-ratio:16/9; border-radius:10px; background:#000; border:none; margin-bottom:10px; }
+.preview-imagem { width:100%; max-height:200px; object-fit:cover; border-radius:10px; margin-bottom:10px; display:none; }
+.preview-link { display:inline-flex; align-items:center; gap:6px; background:rgba(255,107,0,0.1); border:1px solid rgba(255,107,0,0.3); color:var(--accent); padding:7px 14px; border-radius:50px; font-size:12px; font-weight:700; text-decoration:none; }
+
+.publish-btn { width:100%; background:linear-gradient(135deg,#FF6B00,#FF3D00); color:white; border:none; padding:16px; border-radius:12px; font-size:15px; font-weight:700; letter-spacing:2px; text-transform:uppercase; cursor:pointer; box-shadow:0 8px 24px var(--glow); transition:transform 0.15s,opacity 0.15s; margin-top:8px; }
+.publish-btn:hover { transform:translateY(-2px); }
+.publish-btn:disabled { opacity:0.5; cursor:not-allowed; transform:none; }
+
+.toast { position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(80px); background:var(--surface); border:1px solid var(--border); padding:12px 24px; border-radius:50px; font-size:14px; font-weight:600; transition:transform 0.3s; z-index:999; }
+.toast.show { transform:translateX(-50%) translateY(0); }
+.toast.success { border-color:rgba(74,222,128,0.4); color:#4ade80; }
+.toast.error { border-color:rgba(255,60,60,0.4); color:#ff6b6b; }
+
+/* compartilhado */
+input[type=password] { letter-spacing:3px; }
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginScreen">
+  <div class="login-box">
+    <div class="login-logo">PS</div>
+    <div class="login-sub">Painel Admin · PromoShow</div>
+    <div class="login-error" id="loginError">Senha incorreta. Tente novamente.</div>
+    <div class="field">
+      <label>SENHA</label>
+      <input type="password" id="senhaInput" placeholder="••••••••" onkeydown="if(event.key==='Enter')entrar()">
+    </div>
+    <button class="publish-btn" onclick="entrar()">Entrar</button>
+  </div>
+</div>
+
+<!-- ADMIN -->
+<div id="adminScreen">
+  <div class="admin-header">
+    <div class="admin-title">Painel <span>Banner</span></div>
+    <button class="logout-btn" onclick="sair()">Sair</button>
+  </div>
+
+  <!-- Status -->
+  <div class="card">
+    <div class="card-title">Status do Banner</div>
+    <div class="toggle-row">
+      <span class="toggle-label">Banner visível no site</span>
+      <label class="toggle">
+        <input type="checkbox" id="ativo" checked>
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Conteúdo -->
+  <div class="card">
+    <div class="card-title">Conteúdo</div>
+    <div class="field">
+      <label>TÍTULO</label>
+      <input type="text" id="titulo" placeholder="Ex: 💡 Dica do Dia" oninput="atualizaPreview()">
+    </div>
+    <div class="field">
+      <label>TEXTO</label>
+      <textarea id="texto" placeholder="Escreva aqui o texto do banner..." oninput="atualizaPreview()"></textarea>
+    </div>
+  </div>
+
+  <!-- Mídia -->
+  <div class="card">
+    <div class="card-title">Mídia (YouTube ou Imagem)</div>
+    <div class="field">
+      <label>ID DO VÍDEO YOUTUBE</label>
+      <input type="text" id="youtube" placeholder="Ex: dQw4w9WgXcW" oninput="atualizaPreview()">
+      <div class="hint">Só o ID — parte após ?v= na URL do YouTube</div>
+    </div>
+    <div class="field">
+      <label>URL DA IMAGEM (se não tiver vídeo)</label>
+      <input type="text" id="imagem" placeholder="https://..." oninput="atualizaPreview()">
+    </div>
+  </div>
+
+  <!-- Link -->
+  <div class="card">
+    <div class="card-title">Link (opcional)</div>
+    <div class="field">
+      <label>URL DO LINK</label>
+      <input type="text" id="link" placeholder="https://youtube.com/watch?v=...">
+    </div>
+    <div class="field">
+      <label>TEXTO DO BOTÃO</label>
+      <input type="text" id="linkTexto" placeholder="Ex: ▶ Ver review completo">
+    </div>
+  </div>
+
+  <!-- Preview -->
+  <div class="card">
+    <div class="card-title">Preview</div>
+    <div class="preview-box" id="previewBox">
+      <div style="color:var(--muted);font-size:13px;text-align:center;padding:20px 0">Preencha os campos acima para ver o preview</div>
+    </div>
+  </div>
+
+  <button class="publish-btn" id="publishBtn" onclick="publicar()">🚀 Publicar Banner</button>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const SENHA = 'promo2026';
+const WEBHOOK_URL = 'SEU_WEBHOOK_N8N_AQUI';
+
+function entrar(){
+  const s = document.getElementById('senhaInput').value;
+  if(s === SENHA){
+    document.getElementById('loginScreen').style.display = 'none';
+    document.getElementById('adminScreen').style.display = 'block';
+    carregarBannerAtual();
+  } else {
+    document.getElementById('loginError').style.display = 'block';
+    document.getElementById('senhaInput').value = '';
+  }
+}
+
+function sair(){
+  document.getElementById('loginScreen').style.display = 'flex';
+  document.getElementById('adminScreen').style.display = 'none';
+  document.getElementById('senhaInput').value = '';
+}
+
+async function carregarBannerAtual(){
+  try {
+    const res = await fetch('https://raw.githubusercontent.com/jvleon1/promoshow-site/main/banner.json?v='+Date.now());
+    if(!res.ok) return;
+    const b = await res.json();
+    document.getElementById('ativo').checked = b.ativo !== false;
+    document.getElementById('titulo').value = b.titulo || '';
+    document.getElementById('texto').value = b.texto || '';
+    document.getElementById('youtube').value = b.youtube || '';
+    document.getElementById('imagem').value = b.imagem || '';
+    document.getElementById('link').value = b.link || '';
+    document.getElementById('linkTexto').value = b.linkTexto || '';
+    atualizaPreview();
+  } catch(e){}
+}
+
+function atualizaPreview(){
+  const titulo = document.getElementById('titulo').value;
+  const texto = document.getElementById('texto').value;
+  const youtube = document.getElementById('youtube').value.trim();
+  const imagem = document.getElementById('imagem').value.trim();
+  const link = document.getElementById('link').value.trim();
+  const linkTexto = document.getElementById('linkTexto').value.trim();
+
+  if(!titulo && !texto && !youtube && !imagem){ 
+    document.getElementById('previewBox').innerHTML = '<div style="color:var(--muted);font-size:13px;text-align:center;padding:20px 0">Preencha os campos acima para ver o preview</div>';
+    return;
+  }
+
+  let html = '';
+  if(youtube) html += `<iframe class="preview-youtube" src="https://www.youtube.com/embed/${youtube}" allowfullscreen></iframe>`;
+  else if(imagem) html += `<img class="preview-imagem" src="${imagem}" style="display:block">`;
+  if(titulo) html += `<div class="preview-titulo">${titulo}</div>`;
+  if(texto) html += `<div class="preview-texto">${texto}</div>`;
+  if(link) html += `<a class="preview-link" href="${link}" target="_blank">${linkTexto||'🔗 Saiba mais'}</a>`;
+  document.getElementById('previewBox').innerHTML = html;
+}
+
+async function publicar(){
+  const btn = document.getElementById('publishBtn');
+  btn.disabled = true;
+  btn.textContent = 'Publicando...';
+
+  const banner = {
+    ativo: document.getElementById('ativo').checked,
+    titulo: document.getElementById('titulo').value,
+    texto: document.getElementById('texto').value,
+    youtube: document.getElementById('youtube').value.trim(),
+    imagem: document.getElementById('imagem').value.trim(),
+    link: document.getElementById('link').value.trim(),
+    linkTexto: document.getElementById('linkTexto').value.trim()
+  };
+
+  try {
+    const res = await fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(banner)
+    });
+    if(res.ok){
+      mostrarToast('✅ Banner publicado com sucesso!', 'success');
+    } else {
+      mostrarToast('❌ Erro ao publicar. Tente novamente.', 'error');
+    }
+  } catch(e){
+    mostrarToast('❌ Erro de conexão.', 'error');
+  }
+
+  btn.disabled = false;
+  btn.textContent = '🚀 Publicar Banner';
+}
+
+function mostrarToast(msg, tipo){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `toast ${tipo} show`;
+  setTimeout(() => t.className = 'toast', 3000);
+}
+</script>
+</body>
+</html>
