@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Pasta Térmica | Rise Mode | Frost 5g | 6...",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-81z1k-mfa13emb3catc8",
-    "ratingStar": "5",
-    "priceDiscountRate": 21,
-    "price": "26.9",
-    "sales": 897,
-    "offerLink": "https://s.shopee.com.br/9zsxk4HyUW",
-    "nicho": "Tech_e_Gadgets",
-    "timestamp": 1773367933
-  },
-  {
     "productNameClean": "WS-858 - Microfone Infantil de Karaoke Microfone de Brinquedo Sem...",
     "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7qukw-lhns9z8fs3uf7f",
     "ratingStar": "4.8",
@@ -1098,5 +1087,16 @@
     "offerLink": "https://s.shopee.com.br/1qXHaiMfCt",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773453253
+  },
+  {
+    "productNameClean": "Bettdow Teclado Mágico para ipad Pro 1112.9 Air 4 5...",
+    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-lv5t7hdbcl2516",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 64,
+    "price": "399",
+    "sales": 671,
+    "offerLink": "https://s.shopee.com.br/gLKCyzLdM",
+    "nicho": "Tech_e_Gadgets",
+    "timestamp": 1773453613
   }
 ]
