@@ -131,11 +131,11 @@ body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:
 
 /* MOBILE */
 @media(max-width:860px) {
-  .layout { display:flex; flex-direction:column; min-height:unset; }
-  .main { order:1; padding:14px; gap:14px; height:auto; position:static; overflow-y:visible; }
-  .sidebar { order:2; border-right:none; border-top:1px solid var(--border); max-height:none; height:auto; position:static; overflow-y:visible; }
+  .layout { display:flex; flex-direction:column; }
+  .main { order:1; padding:14px; gap:14px; }
+  .sidebar { order:2; border-right:none; border-top:1px solid var(--border); max-height:none; height:auto; position:static; }
   .sidebar-header { position:static; padding:14px 16px 10px; }
-  .sidebar-list { flex-direction:column; overflow-y:visible; overflow-x:hidden; max-height:none; padding:8px 10px; gap:8px; }
+  .sidebar-list { flex-direction:column; overflow-y:auto; overflow-x:hidden; max-height:none; padding:8px 10px; gap:8px; }
   .produto-card { min-width:unset; flex-direction:row; align-items:center; }
   .card-img { width:56px; height:56px; }
   .champion-wrap { grid-template-columns:1fr; border-radius:16px; }
@@ -166,7 +166,7 @@ body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:
 
 <header class="topbar">
   <div class="logo">
-    <div class="logo-icon">PS</div>
+    <img class="logo-icon" src="logo.jpeg" alt="PromoShow" style="object-fit:cover;border-radius:10px;">
     <div>
       <div class="logo-name">PromoShow</div>
       <div class="logo-sub">Ofertas Shopee</div>
