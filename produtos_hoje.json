@@ -1,16 +1,5 @@
 [
   {
-    "productNameClean": "Kit 12 Pedras Quentes Vulcânicas Corporal + 10 Podais +...",
-    "imageUrl": "https://cf.shopee.com.br/file/br-11134207-7r98o-m8fe7q5snnqp5d",
-    "ratingStar": "4.9",
-    "priceDiscountRate": 55,
-    "price": "116.96",
-    "sales": 567,
-    "offerLink": "https://s.shopee.com.br/8fNbejvpsV",
-    "nicho": "Tech_e_Gadgets",
-    "timestamp": 1773449294
-  },
-  {
     "productNameClean": "Projetor 4K HD 150 Polegadas Celular, Tv B0x, Xbox, PS...",
     "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-82619-ml1770na4j5wbb",
     "ratingStar": "4.8",
@@ -1098,5 +1087,16 @@
     "offerLink": "https://s.shopee.com.br/3LM6rlkDTE",
     "nicho": "Tech_e_Gadgets",
     "timestamp": 1773533894
+  },
+  {
+    "productNameClean": "Suporte Para Cpu Computador Ajustável Rodízios",
+    "imageUrl": "https://cf.shopee.com.br/file/sg-11134201-22100-de2tool5fniv46",
+    "ratingStar": "4.9",
+    "priceDiscountRate": 45,
+    "price": "36.29",
+    "sales": 211,
+    "offerLink": "https://s.shopee.com.br/gLLhHSKqg",
+    "nicho": "Tech_e_Gadgets",
+    "timestamp": 1773534254
   }
 ]
