@@ -131,14 +131,22 @@ body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:
 
 /* MOBILE */
 @media(max-width:860px) {
-  .layout { grid-template-columns:1fr; }
-  .sidebar { border-right:none; border-bottom:1px solid var(--border); max-height:240px; }
-  .sidebar-list { flex-direction:row; overflow-x:auto; overflow-y:hidden; flex-wrap:nowrap; }
-  .produto-card { min-width:180px; flex-direction:column; align-items:flex-start; }
-  .champion-wrap { grid-template-columns:1fr; }
-  .champion-img-side { min-height:220px; padding:20px; }
-  .champion-info-side { padding:20px; }
-  .main { padding:16px; }
+  .layout { display:flex; flex-direction:column; min-height:unset; }
+  .main { order:1; padding:14px; gap:14px; height:auto; position:static; overflow-y:visible; }
+  .sidebar { order:2; border-right:none; border-top:1px solid var(--border); max-height:none; height:auto; position:static; overflow-y:visible; }
+  .sidebar-header { position:static; padding:14px 16px 10px; }
+  .sidebar-list { flex-direction:column; overflow-y:visible; overflow-x:hidden; max-height:none; padding:8px 10px; gap:8px; }
+  .produto-card { min-width:unset; flex-direction:row; align-items:center; }
+  .card-img { width:56px; height:56px; }
+  .champion-wrap { grid-template-columns:1fr; border-radius:16px; }
+  .champion-img-side { min-height:200px; padding:20px; }
+  .champion-img { max-width:180px; }
+  .discount-circle { width:56px; height:56px; top:14px; right:14px; }
+  .discount-num { font-size:18px; }
+  .champion-info-side { padding:18px 18px 22px; gap:10px; }
+  .champ-name { font-size:24px; }
+  .price-current { font-size:32px; }
+  .cta-btn { padding:13px 16px; font-size:13px; }
 }
 
 /* BANNER LIVRE */
