@@ -232,8 +232,8 @@ async function carregarProdutos(){
         <td><span class="badge-nicho ${p.ativo ? 'badge-ativo' : 'badge-inativo'}">${p.ativo ? 'Ativo' : 'Inativo'}</span></td>
         <td>
           <div class="action-btns">
-            <button class="btn-sm ${p.ativo ? 'btn-toggle-off' : 'btn-toggle-on'}" onclick="toggleProduto('${p.id}', ${p.ativo})">${p.ativo ? 'Desativar' : 'Ativar'}</button>
-            <button class="btn-sm btn-del" onclick="confirmarDeletar('${p.id}', '${(p.observacao||p.itemId).replace(/'/g,"\\'")}')">Deletar</button>
+            <button class="btn-sm ${p.ativo ? 'btn-toggle-off' : 'btn-toggle-on'}" onclick="toggleProduto(${p.id}, ${p.ativo})">${p.ativo ? 'Desativar' : 'Ativar'}</button>
+            <button class="btn-sm btn-del" onclick="confirmarDeletar(${p.id}, '${(p.observacao||p.itemId).replace(/'/g,"\\'")}')">Deletar</button>
           </div>
         </td>
       </tr>
